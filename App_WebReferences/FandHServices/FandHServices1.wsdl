@@ -1,0 +1,1522 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="FandHServices" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://dataservice.cloudtrip.us/FandHServices.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://dataservice.cloudtrip.us/FandHServices.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://dataservice.cloudtrip.us/FandHServices.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+      <xsd:import schemaLocation="http://dataservice.cloudtrip.us/FandHServices.svc?xsd=xsd3" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IFandHServices_GetAutoCompleteAirport_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutoCompleteAirport" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GetAutoCompleteAirport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutoCompleteAirportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_SET_Booking_Master_InputMessage">
+    <wsdl:part name="parameters" element="tns:SET_Booking_Master" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_SET_Booking_Master_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SET_Booking_MasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GET_Booking_Master_InputMessage">
+    <wsdl:part name="parameters" element="tns:GET_Booking_Master" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GET_Booking_Master_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GET_Booking_MasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_SET_Booking_Detail1_InputMessage">
+    <wsdl:part name="parameters" element="tns:SET_Booking_Detail1" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_SET_Booking_Detail1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SET_Booking_Detail1Response" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_SET_Booking_Detail2_InputMessage">
+    <wsdl:part name="parameters" element="tns:SET_Booking_Detail2" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_SET_Booking_Detail2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SET_Booking_Detail2Response" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GET_Booking_Detail1_InputMessage">
+    <wsdl:part name="parameters" element="tns:GET_Booking_Detail1" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GET_Booking_Detail1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GET_Booking_Detail1Response" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GET_Booking_Detail2_InputMessage">
+    <wsdl:part name="parameters" element="tns:GET_Booking_Detail2" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GET_Booking_Detail2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GET_Booking_Detail2Response" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_SET_Amount_Charges_Detail_InputMessage">
+    <wsdl:part name="parameters" element="tns:SET_Amount_Charges_Detail" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_SET_Amount_Charges_Detail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SET_Amount_Charges_DetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GET_Amount_Charges_Detail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GET_Amount_Charges_Detail" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GET_Amount_Charges_Detail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GET_Amount_Charges_DetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_SET_Contact_Detail_InputMessage">
+    <wsdl:part name="parameters" element="tns:SET_Contact_Detail" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_SET_Contact_Detail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SET_Contact_DetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GET_Contact_Detail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GET_Contact_Detail" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GET_Contact_Detail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GET_Contact_DetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_SET_Passenger_Detail_InputMessage">
+    <wsdl:part name="parameters" element="tns:SET_Passenger_Detail" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_SET_Passenger_Detail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SET_Passenger_DetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GET_Passenger_Detail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GET_Passenger_Detail" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GET_Passenger_Detail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GET_Passenger_DetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_SET_Sector_Detail_InputMessage">
+    <wsdl:part name="parameters" element="tns:SET_Sector_Detail" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_SET_Sector_Detail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SET_Sector_DetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GET_Sector_Detail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GET_Sector_Detail" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GET_Sector_Detail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GET_Sector_DetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_SET_Sectors_Master_InputMessage">
+    <wsdl:part name="parameters" element="tns:SET_Sectors_Master" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_SET_Sectors_Master_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SET_Sectors_MasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GET_Sectors_Master_InputMessage">
+    <wsdl:part name="parameters" element="tns:GET_Sectors_Master" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GET_Sectors_Master_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GET_Sectors_MasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_SET_FlightDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:SET_FlightDetails" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_SET_FlightDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SET_FlightDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_SET_FlightDetailsDEC_InputMessage">
+    <wsdl:part name="parameters" element="tns:SET_FlightDetailsDEC" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_SET_FlightDetailsDEC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SET_FlightDetailsDECResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_SET_Transaction_Master_InputMessage">
+    <wsdl:part name="parameters" element="tns:SET_Transaction_Master" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_SET_Transaction_Master_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SET_Transaction_MasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GET_Transaction_Master_InputMessage">
+    <wsdl:part name="parameters" element="tns:GET_Transaction_Master" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GET_Transaction_Master_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GET_Transaction_MasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_SET_Transaction_Details_InputMessage">
+    <wsdl:part name="parameters" element="tns:SET_Transaction_Details" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_SET_Transaction_Details_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SET_Transaction_DetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GET_Transaction_Details_InputMessage">
+    <wsdl:part name="parameters" element="tns:GET_Transaction_Details" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GET_Transaction_Details_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GET_Transaction_DetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GenerateIDs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateIDs" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GenerateIDs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerateIDsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GetHomeAirlineFares_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHomeAirlineFares" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GetHomeAirlineFares_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHomeAirlineFaresResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GetHomeAirlineFares_ByCurrency_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHomeAirlineFares_ByCurrency" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GetHomeAirlineFares_ByCurrency_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHomeAirlineFares_ByCurrencyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GetStaticData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStaticData" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GetStaticData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStaticDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GetStaticData_II_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStaticData_II" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GetStaticData_II_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStaticData_IIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GET_Campaign_Master_InputMessage">
+    <wsdl:part name="parameters" element="tns:GET_Campaign_Master" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GET_Campaign_Master_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GET_Campaign_MasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GetExchangeRate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExchangeRate" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GetExchangeRate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExchangeRateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_ValidateContactNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateContactNumber" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_ValidateContactNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateContactNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_SET_SEOContents_InputMessage">
+    <wsdl:part name="parameters" element="tns:SET_SEOContents" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_SET_SEOContents_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SET_SEOContentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_Get_SEOContents_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_SEOContents" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_Get_SEOContents_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_SEOContentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_Get_FlightDetails_D4T_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_FlightDetails_D4T" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_Get_FlightDetails_D4T_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_FlightDetails_D4TResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_Get_FlightDetails_TJ_OF_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_FlightDetails_TJ_OF" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_Get_FlightDetails_TJ_OF_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_FlightDetails_TJ_OFResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_Get_FlightDetails_TJ_TP_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_FlightDetails_TJ_TP" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_Get_FlightDetails_TJ_TP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_FlightDetails_TJ_TPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_FlightFareAdmin_InputMessage">
+    <wsdl:part name="parameters" element="tns:FlightFareAdmin" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_FlightFareAdmin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FlightFareAdminResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_bindOperator_InputMessage">
+    <wsdl:part name="parameters" element="tns:bindOperator" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_bindOperator_OutputMessage">
+    <wsdl:part name="parameters" element="tns:bindOperatorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_bindFareSheet_InputMessage">
+    <wsdl:part name="parameters" element="tns:bindFareSheet" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_bindFareSheet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:bindFareSheetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_DeleteFare_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFare" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_DeleteFare_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFareResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_UpdateFares_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateFares" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_UpdateFares_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateFaresResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_AddFares_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddFares" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_AddFares_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddFaresResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_FF_bindOperator_InputMessage">
+    <wsdl:part name="parameters" element="tns:FF_bindOperator" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_FF_bindOperator_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FF_bindOperatorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_FF_UpdateFareStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:FF_UpdateFareStatus" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_FF_UpdateFareStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FF_UpdateFareStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_FF_FlightFaresDelete_InputMessage">
+    <wsdl:part name="parameters" element="tns:FF_FlightFaresDelete" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_FF_FlightFaresDelete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FF_FlightFaresDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_FF_UpdateFares_InputMessage">
+    <wsdl:part name="parameters" element="tns:FF_UpdateFares" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_FF_UpdateFares_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FF_UpdateFaresResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_SET_TicketIssuance_InputMessage">
+    <wsdl:part name="parameters" element="tns:SET_TicketIssuance" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_SET_TicketIssuance_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SET_TicketIssuanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_Get_TicketIssuance_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_TicketIssuance" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_Get_TicketIssuance_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_TicketIssuanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_SET_Call_Details1_InputMessage">
+    <wsdl:part name="parameters" element="tns:SET_Call_Details1" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_SET_Call_Details1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SET_Call_Details1Response" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_SET_Call_Details_InputMessage">
+    <wsdl:part name="parameters" element="tns:SET_Call_Details" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_SET_Call_Details_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SET_Call_DetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_Get_FlightDetails_FT_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_FlightDetails_FT" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_Get_FlightDetails_FT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_FlightDetails_FTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_Get_FlightDetails_FT_OF_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_FlightDetails_FT_OF" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_Get_FlightDetails_FT_OF_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_FlightDetails_FT_OFResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_Get_FlightDetails_FT_TP_InputMessage">
+    <wsdl:part name="parameters" element="tns:Get_FlightDetails_FT_TP" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_Get_FlightDetails_FT_TP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Get_FlightDetails_FT_TPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_FlightFareAdmin_FT_InputMessage">
+    <wsdl:part name="parameters" element="tns:FlightFareAdmin_FT" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_FlightFareAdmin_FT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FlightFareAdmin_FTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_bindOperator_FT_InputMessage">
+    <wsdl:part name="parameters" element="tns:bindOperator_FT" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_bindOperator_FT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:bindOperator_FTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_bindFareSheet_FT_InputMessage">
+    <wsdl:part name="parameters" element="tns:bindFareSheet_FT" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_bindFareSheet_FT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:bindFareSheet_FTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_DeleteFare_FT_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFare_FT" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_DeleteFare_FT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFare_FTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_UpdateFares_FT_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateFares_FT" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_UpdateFares_FT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateFares_FTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_AddFares_FT_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddFares_FT" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_AddFares_FT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddFares_FTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_FF_bindOperator_FT_InputMessage">
+    <wsdl:part name="parameters" element="tns:FF_bindOperator_FT" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_FF_bindOperator_FT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FF_bindOperator_FTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_FF_UpdateFareStatus_FT_InputMessage">
+    <wsdl:part name="parameters" element="tns:FF_UpdateFareStatus_FT" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_FF_UpdateFareStatus_FT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FF_UpdateFareStatus_FTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_FF_FlightFaresDelete_FT_InputMessage">
+    <wsdl:part name="parameters" element="tns:FF_FlightFaresDelete_FT" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_FF_FlightFaresDelete_FT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FF_FlightFaresDelete_FTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_FF_UpdateFares_FT_InputMessage">
+    <wsdl:part name="parameters" element="tns:FF_UpdateFares_FT" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_FF_UpdateFares_FT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FF_UpdateFares_FTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_SET_Holiday_Offers_InputMessage">
+    <wsdl:part name="parameters" element="tns:SET_Holiday_Offers" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_SET_Holiday_Offers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SET_Holiday_OffersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GET_Holiday_Offers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GET_Holiday_Offers" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GET_Holiday_Offers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GET_Holiday_OffersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_SET_Holiday_Special_Offers_InputMessage">
+    <wsdl:part name="parameters" element="tns:SET_Holiday_Special_Offers" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_SET_Holiday_Special_Offers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SET_Holiday_Special_OffersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GET_Holiday_Special_Offers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GET_Holiday_Special_Offers" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GET_Holiday_Special_Offers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GET_Holiday_Special_OffersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_SET_Holiday_Offer_Images_InputMessage">
+    <wsdl:part name="parameters" element="tns:SET_Holiday_Offer_Images" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_SET_Holiday_Offer_Images_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SET_Holiday_Offer_ImagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GET_Holiday_Offer_Images_InputMessage">
+    <wsdl:part name="parameters" element="tns:GET_Holiday_Offer_Images" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GET_Holiday_Offer_Images_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GET_Holiday_Offer_ImagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GET_Holiday_Offers_UI_InputMessage">
+    <wsdl:part name="parameters" element="tns:GET_Holiday_Offers_UI" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GET_Holiday_Offers_UI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GET_Holiday_Offers_UIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GET_Hotel_Offers_UI_InputMessage">
+    <wsdl:part name="parameters" element="tns:GET_Hotel_Offers_UI" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GET_Hotel_Offers_UI_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GET_Hotel_Offers_UIResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_SET_Holiday_Offer_City_Overview_InputMessage">
+    <wsdl:part name="parameters" element="tns:SET_Holiday_Offer_City_Overview" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_SET_Holiday_Offer_City_Overview_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SET_Holiday_Offer_City_OverviewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GET_Holiday_Offer_City_Overview_InputMessage">
+    <wsdl:part name="parameters" element="tns:GET_Holiday_Offer_City_Overview" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GET_Holiday_Offer_City_Overview_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GET_Holiday_Offer_City_OverviewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_SET_Supplier_Master_InputMessage">
+    <wsdl:part name="parameters" element="tns:SET_Supplier_Master" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_SET_Supplier_Master_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SET_Supplier_MasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GET_Supplier_Master_InputMessage">
+    <wsdl:part name="parameters" element="tns:GET_Supplier_Master" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GET_Supplier_Master_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GET_Supplier_MasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GET_Agents_P_L_InputMessage">
+    <wsdl:part name="parameters" element="tns:GET_Agents_P_L" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GET_Agents_P_L_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GET_Agents_P_LResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_SetInvoiceProfit_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetInvoiceProfit" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_SetInvoiceProfit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetInvoiceProfitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GET_Atol_Report_InputMessage">
+    <wsdl:part name="parameters" element="tns:GET_Atol_Report" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_GET_Atol_Report_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GET_Atol_ReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_SearchPageTracker_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchPageTracker" />
+  </wsdl:message>
+  <wsdl:message name="IFandHServices_SearchPageTracker_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchPageTrackerResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IFandHServices">
+    <wsdl:operation name="GetAutoCompleteAirport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/GetAutoCompleteAirport" message="tns:IFandHServices_GetAutoCompleteAirport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/GetAutoCompleteAirportResponse" message="tns:IFandHServices_GetAutoCompleteAirport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SET_Booking_Master">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/SET_Booking_Master" message="tns:IFandHServices_SET_Booking_Master_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/SET_Booking_MasterResponse" message="tns:IFandHServices_SET_Booking_Master_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_Booking_Master">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/GET_Booking_Master" message="tns:IFandHServices_GET_Booking_Master_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/GET_Booking_MasterResponse" message="tns:IFandHServices_GET_Booking_Master_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SET_Booking_Detail1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/SET_Booking_Detail1" message="tns:IFandHServices_SET_Booking_Detail1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/SET_Booking_Detail1Response" message="tns:IFandHServices_SET_Booking_Detail1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SET_Booking_Detail2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/SET_Booking_Detail2" message="tns:IFandHServices_SET_Booking_Detail2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/SET_Booking_Detail2Response" message="tns:IFandHServices_SET_Booking_Detail2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_Booking_Detail1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/GET_Booking_Detail1" message="tns:IFandHServices_GET_Booking_Detail1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/GET_Booking_Detail1Response" message="tns:IFandHServices_GET_Booking_Detail1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_Booking_Detail2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/GET_Booking_Detail2" message="tns:IFandHServices_GET_Booking_Detail2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/GET_Booking_Detail2Response" message="tns:IFandHServices_GET_Booking_Detail2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SET_Amount_Charges_Detail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/SET_Amount_Charges_Detail" message="tns:IFandHServices_SET_Amount_Charges_Detail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/SET_Amount_Charges_DetailResponse" message="tns:IFandHServices_SET_Amount_Charges_Detail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_Amount_Charges_Detail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/GET_Amount_Charges_Detail" message="tns:IFandHServices_GET_Amount_Charges_Detail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/GET_Amount_Charges_DetailResponse" message="tns:IFandHServices_GET_Amount_Charges_Detail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SET_Contact_Detail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/SET_Contact_Detail" message="tns:IFandHServices_SET_Contact_Detail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/SET_Contact_DetailResponse" message="tns:IFandHServices_SET_Contact_Detail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_Contact_Detail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/GET_Contact_Detail" message="tns:IFandHServices_GET_Contact_Detail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/GET_Contact_DetailResponse" message="tns:IFandHServices_GET_Contact_Detail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SET_Passenger_Detail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/SET_Passenger_Detail" message="tns:IFandHServices_SET_Passenger_Detail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/SET_Passenger_DetailResponse" message="tns:IFandHServices_SET_Passenger_Detail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_Passenger_Detail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/GET_Passenger_Detail" message="tns:IFandHServices_GET_Passenger_Detail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/GET_Passenger_DetailResponse" message="tns:IFandHServices_GET_Passenger_Detail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SET_Sector_Detail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/SET_Sector_Detail" message="tns:IFandHServices_SET_Sector_Detail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/SET_Sector_DetailResponse" message="tns:IFandHServices_SET_Sector_Detail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_Sector_Detail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/GET_Sector_Detail" message="tns:IFandHServices_GET_Sector_Detail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/GET_Sector_DetailResponse" message="tns:IFandHServices_GET_Sector_Detail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SET_Sectors_Master">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/SET_Sectors_Master" message="tns:IFandHServices_SET_Sectors_Master_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/SET_Sectors_MasterResponse" message="tns:IFandHServices_SET_Sectors_Master_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_Sectors_Master">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/GET_Sectors_Master" message="tns:IFandHServices_GET_Sectors_Master_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/GET_Sectors_MasterResponse" message="tns:IFandHServices_GET_Sectors_Master_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SET_FlightDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/SET_FlightDetails" message="tns:IFandHServices_SET_FlightDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/SET_FlightDetailsResponse" message="tns:IFandHServices_SET_FlightDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SET_FlightDetailsDEC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/SET_FlightDetailsDEC" message="tns:IFandHServices_SET_FlightDetailsDEC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/SET_FlightDetailsDECResponse" message="tns:IFandHServices_SET_FlightDetailsDEC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SET_Transaction_Master">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/SET_Transaction_Master" message="tns:IFandHServices_SET_Transaction_Master_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/SET_Transaction_MasterResponse" message="tns:IFandHServices_SET_Transaction_Master_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_Transaction_Master">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/GET_Transaction_Master" message="tns:IFandHServices_GET_Transaction_Master_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/GET_Transaction_MasterResponse" message="tns:IFandHServices_GET_Transaction_Master_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SET_Transaction_Details">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/SET_Transaction_Details" message="tns:IFandHServices_SET_Transaction_Details_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/SET_Transaction_DetailsResponse" message="tns:IFandHServices_SET_Transaction_Details_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_Transaction_Details">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/GET_Transaction_Details" message="tns:IFandHServices_GET_Transaction_Details_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/GET_Transaction_DetailsResponse" message="tns:IFandHServices_GET_Transaction_Details_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerateIDs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/GenerateIDs" message="tns:IFandHServices_GenerateIDs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/GenerateIDsResponse" message="tns:IFandHServices_GenerateIDs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHomeAirlineFares">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/GetHomeAirlineFares" message="tns:IFandHServices_GetHomeAirlineFares_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/GetHomeAirlineFaresResponse" message="tns:IFandHServices_GetHomeAirlineFares_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHomeAirlineFares_ByCurrency">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/GetHomeAirlineFares_ByCurrency" message="tns:IFandHServices_GetHomeAirlineFares_ByCurrency_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/GetHomeAirlineFares_ByCurrencyResponse" message="tns:IFandHServices_GetHomeAirlineFares_ByCurrency_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStaticData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/GetStaticData" message="tns:IFandHServices_GetStaticData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/GetStaticDataResponse" message="tns:IFandHServices_GetStaticData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStaticData_II">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/GetStaticData_II" message="tns:IFandHServices_GetStaticData_II_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/GetStaticData_IIResponse" message="tns:IFandHServices_GetStaticData_II_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_Campaign_Master">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/GET_Campaign_Master" message="tns:IFandHServices_GET_Campaign_Master_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/GET_Campaign_MasterResponse" message="tns:IFandHServices_GET_Campaign_Master_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExchangeRate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/GetExchangeRate" message="tns:IFandHServices_GetExchangeRate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/GetExchangeRateResponse" message="tns:IFandHServices_GetExchangeRate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateContactNumber">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/ValidateContactNumber" message="tns:IFandHServices_ValidateContactNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/ValidateContactNumberResponse" message="tns:IFandHServices_ValidateContactNumber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SET_SEOContents">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/SET_SEOContents" message="tns:IFandHServices_SET_SEOContents_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/SET_SEOContentsResponse" message="tns:IFandHServices_SET_SEOContents_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_SEOContents">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/Get_SEOContents" message="tns:IFandHServices_Get_SEOContents_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/Get_SEOContentsResponse" message="tns:IFandHServices_Get_SEOContents_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_FlightDetails_D4T">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/Get_FlightDetails_D4T" message="tns:IFandHServices_Get_FlightDetails_D4T_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/Get_FlightDetails_D4TResponse" message="tns:IFandHServices_Get_FlightDetails_D4T_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_FlightDetails_TJ_OF">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/Get_FlightDetails_TJ_OF" message="tns:IFandHServices_Get_FlightDetails_TJ_OF_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/Get_FlightDetails_TJ_OFResponse" message="tns:IFandHServices_Get_FlightDetails_TJ_OF_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_FlightDetails_TJ_TP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/Get_FlightDetails_TJ_TP" message="tns:IFandHServices_Get_FlightDetails_TJ_TP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/Get_FlightDetails_TJ_TPResponse" message="tns:IFandHServices_Get_FlightDetails_TJ_TP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FlightFareAdmin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/FlightFareAdmin" message="tns:IFandHServices_FlightFareAdmin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/FlightFareAdminResponse" message="tns:IFandHServices_FlightFareAdmin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="bindOperator">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/bindOperator" message="tns:IFandHServices_bindOperator_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/bindOperatorResponse" message="tns:IFandHServices_bindOperator_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="bindFareSheet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/bindFareSheet" message="tns:IFandHServices_bindFareSheet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/bindFareSheetResponse" message="tns:IFandHServices_bindFareSheet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFare">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/DeleteFare" message="tns:IFandHServices_DeleteFare_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/DeleteFareResponse" message="tns:IFandHServices_DeleteFare_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFares">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/UpdateFares" message="tns:IFandHServices_UpdateFares_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/UpdateFaresResponse" message="tns:IFandHServices_UpdateFares_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddFares">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/AddFares" message="tns:IFandHServices_AddFares_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/AddFaresResponse" message="tns:IFandHServices_AddFares_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FF_bindOperator">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/FF_bindOperator" message="tns:IFandHServices_FF_bindOperator_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/FF_bindOperatorResponse" message="tns:IFandHServices_FF_bindOperator_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FF_UpdateFareStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/FF_UpdateFareStatus" message="tns:IFandHServices_FF_UpdateFareStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/FF_UpdateFareStatusResponse" message="tns:IFandHServices_FF_UpdateFareStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FF_FlightFaresDelete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/FF_FlightFaresDelete" message="tns:IFandHServices_FF_FlightFaresDelete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/FF_FlightFaresDeleteResponse" message="tns:IFandHServices_FF_FlightFaresDelete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FF_UpdateFares">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/FF_UpdateFares" message="tns:IFandHServices_FF_UpdateFares_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/FF_UpdateFaresResponse" message="tns:IFandHServices_FF_UpdateFares_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SET_TicketIssuance">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/SET_TicketIssuance" message="tns:IFandHServices_SET_TicketIssuance_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/SET_TicketIssuanceResponse" message="tns:IFandHServices_SET_TicketIssuance_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_TicketIssuance">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/Get_TicketIssuance" message="tns:IFandHServices_Get_TicketIssuance_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/Get_TicketIssuanceResponse" message="tns:IFandHServices_Get_TicketIssuance_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SET_Call_Details1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/SET_Call_Details1" message="tns:IFandHServices_SET_Call_Details1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/SET_Call_Details1Response" message="tns:IFandHServices_SET_Call_Details1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SET_Call_Details">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/SET_Call_Details" message="tns:IFandHServices_SET_Call_Details_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/SET_Call_DetailsResponse" message="tns:IFandHServices_SET_Call_Details_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_FlightDetails_FT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/Get_FlightDetails_FT" message="tns:IFandHServices_Get_FlightDetails_FT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/Get_FlightDetails_FTResponse" message="tns:IFandHServices_Get_FlightDetails_FT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_FlightDetails_FT_OF">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/Get_FlightDetails_FT_OF" message="tns:IFandHServices_Get_FlightDetails_FT_OF_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/Get_FlightDetails_FT_OFResponse" message="tns:IFandHServices_Get_FlightDetails_FT_OF_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_FlightDetails_FT_TP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/Get_FlightDetails_FT_TP" message="tns:IFandHServices_Get_FlightDetails_FT_TP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/Get_FlightDetails_FT_TPResponse" message="tns:IFandHServices_Get_FlightDetails_FT_TP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FlightFareAdmin_FT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/FlightFareAdmin_FT" message="tns:IFandHServices_FlightFareAdmin_FT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/FlightFareAdmin_FTResponse" message="tns:IFandHServices_FlightFareAdmin_FT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="bindOperator_FT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/bindOperator_FT" message="tns:IFandHServices_bindOperator_FT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/bindOperator_FTResponse" message="tns:IFandHServices_bindOperator_FT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="bindFareSheet_FT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/bindFareSheet_FT" message="tns:IFandHServices_bindFareSheet_FT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/bindFareSheet_FTResponse" message="tns:IFandHServices_bindFareSheet_FT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFare_FT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/DeleteFare_FT" message="tns:IFandHServices_DeleteFare_FT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/DeleteFare_FTResponse" message="tns:IFandHServices_DeleteFare_FT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFares_FT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/UpdateFares_FT" message="tns:IFandHServices_UpdateFares_FT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/UpdateFares_FTResponse" message="tns:IFandHServices_UpdateFares_FT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddFares_FT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/AddFares_FT" message="tns:IFandHServices_AddFares_FT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/AddFares_FTResponse" message="tns:IFandHServices_AddFares_FT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FF_bindOperator_FT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/FF_bindOperator_FT" message="tns:IFandHServices_FF_bindOperator_FT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/FF_bindOperator_FTResponse" message="tns:IFandHServices_FF_bindOperator_FT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FF_UpdateFareStatus_FT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/FF_UpdateFareStatus_FT" message="tns:IFandHServices_FF_UpdateFareStatus_FT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/FF_UpdateFareStatus_FTResponse" message="tns:IFandHServices_FF_UpdateFareStatus_FT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FF_FlightFaresDelete_FT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/FF_FlightFaresDelete_FT" message="tns:IFandHServices_FF_FlightFaresDelete_FT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/FF_FlightFaresDelete_FTResponse" message="tns:IFandHServices_FF_FlightFaresDelete_FT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FF_UpdateFares_FT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/FF_UpdateFares_FT" message="tns:IFandHServices_FF_UpdateFares_FT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/FF_UpdateFares_FTResponse" message="tns:IFandHServices_FF_UpdateFares_FT_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SET_Holiday_Offers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/SET_Holiday_Offers" message="tns:IFandHServices_SET_Holiday_Offers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/SET_Holiday_OffersResponse" message="tns:IFandHServices_SET_Holiday_Offers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_Holiday_Offers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/GET_Holiday_Offers" message="tns:IFandHServices_GET_Holiday_Offers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/GET_Holiday_OffersResponse" message="tns:IFandHServices_GET_Holiday_Offers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SET_Holiday_Special_Offers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/SET_Holiday_Special_Offers" message="tns:IFandHServices_SET_Holiday_Special_Offers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/SET_Holiday_Special_OffersResponse" message="tns:IFandHServices_SET_Holiday_Special_Offers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_Holiday_Special_Offers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/GET_Holiday_Special_Offers" message="tns:IFandHServices_GET_Holiday_Special_Offers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/GET_Holiday_Special_OffersResponse" message="tns:IFandHServices_GET_Holiday_Special_Offers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SET_Holiday_Offer_Images">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/SET_Holiday_Offer_Images" message="tns:IFandHServices_SET_Holiday_Offer_Images_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/SET_Holiday_Offer_ImagesResponse" message="tns:IFandHServices_SET_Holiday_Offer_Images_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_Holiday_Offer_Images">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/GET_Holiday_Offer_Images" message="tns:IFandHServices_GET_Holiday_Offer_Images_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/GET_Holiday_Offer_ImagesResponse" message="tns:IFandHServices_GET_Holiday_Offer_Images_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_Holiday_Offers_UI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/GET_Holiday_Offers_UI" message="tns:IFandHServices_GET_Holiday_Offers_UI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/GET_Holiday_Offers_UIResponse" message="tns:IFandHServices_GET_Holiday_Offers_UI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_Hotel_Offers_UI">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/GET_Hotel_Offers_UI" message="tns:IFandHServices_GET_Hotel_Offers_UI_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/GET_Hotel_Offers_UIResponse" message="tns:IFandHServices_GET_Hotel_Offers_UI_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SET_Holiday_Offer_City_Overview">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/SET_Holiday_Offer_City_Overview" message="tns:IFandHServices_SET_Holiday_Offer_City_Overview_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/SET_Holiday_Offer_City_OverviewResponse" message="tns:IFandHServices_SET_Holiday_Offer_City_Overview_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_Holiday_Offer_City_Overview">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/GET_Holiday_Offer_City_Overview" message="tns:IFandHServices_GET_Holiday_Offer_City_Overview_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/GET_Holiday_Offer_City_OverviewResponse" message="tns:IFandHServices_GET_Holiday_Offer_City_Overview_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SET_Supplier_Master">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/SET_Supplier_Master" message="tns:IFandHServices_SET_Supplier_Master_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/SET_Supplier_MasterResponse" message="tns:IFandHServices_SET_Supplier_Master_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_Supplier_Master">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/GET_Supplier_Master" message="tns:IFandHServices_GET_Supplier_Master_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/GET_Supplier_MasterResponse" message="tns:IFandHServices_GET_Supplier_Master_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_Agents_P_L">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/GET_Agents_P_L" message="tns:IFandHServices_GET_Agents_P_L_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/GET_Agents_P_LResponse" message="tns:IFandHServices_GET_Agents_P_L_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetInvoiceProfit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/SetInvoiceProfit" message="tns:IFandHServices_SetInvoiceProfit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/SetInvoiceProfitResponse" message="tns:IFandHServices_SetInvoiceProfit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_Atol_Report">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/GET_Atol_Report" message="tns:IFandHServices_GET_Atol_Report_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/GET_Atol_ReportResponse" message="tns:IFandHServices_GET_Atol_Report_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchPageTracker">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFandHServices/SearchPageTracker" message="tns:IFandHServices_SearchPageTracker_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFandHServices/SearchPageTrackerResponse" message="tns:IFandHServices_SearchPageTracker_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IFandHServices" type="tns:IFandHServices">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAutoCompleteAirport">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/GetAutoCompleteAirport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SET_Booking_Master">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/SET_Booking_Master" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_Booking_Master">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/GET_Booking_Master" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SET_Booking_Detail1">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/SET_Booking_Detail1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SET_Booking_Detail2">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/SET_Booking_Detail2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_Booking_Detail1">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/GET_Booking_Detail1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_Booking_Detail2">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/GET_Booking_Detail2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SET_Amount_Charges_Detail">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/SET_Amount_Charges_Detail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_Amount_Charges_Detail">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/GET_Amount_Charges_Detail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SET_Contact_Detail">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/SET_Contact_Detail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_Contact_Detail">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/GET_Contact_Detail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SET_Passenger_Detail">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/SET_Passenger_Detail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_Passenger_Detail">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/GET_Passenger_Detail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SET_Sector_Detail">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/SET_Sector_Detail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_Sector_Detail">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/GET_Sector_Detail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SET_Sectors_Master">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/SET_Sectors_Master" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_Sectors_Master">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/GET_Sectors_Master" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SET_FlightDetails">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/SET_FlightDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SET_FlightDetailsDEC">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/SET_FlightDetailsDEC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SET_Transaction_Master">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/SET_Transaction_Master" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_Transaction_Master">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/GET_Transaction_Master" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SET_Transaction_Details">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/SET_Transaction_Details" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_Transaction_Details">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/GET_Transaction_Details" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerateIDs">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/GenerateIDs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHomeAirlineFares">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/GetHomeAirlineFares" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHomeAirlineFares_ByCurrency">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/GetHomeAirlineFares_ByCurrency" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStaticData">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/GetStaticData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStaticData_II">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/GetStaticData_II" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_Campaign_Master">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/GET_Campaign_Master" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExchangeRate">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/GetExchangeRate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateContactNumber">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/ValidateContactNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SET_SEOContents">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/SET_SEOContents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_SEOContents">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/Get_SEOContents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_FlightDetails_D4T">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/Get_FlightDetails_D4T" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_FlightDetails_TJ_OF">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/Get_FlightDetails_TJ_OF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_FlightDetails_TJ_TP">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/Get_FlightDetails_TJ_TP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FlightFareAdmin">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/FlightFareAdmin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bindOperator">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/bindOperator" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bindFareSheet">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/bindFareSheet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFare">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/DeleteFare" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFares">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/UpdateFares" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddFares">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/AddFares" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FF_bindOperator">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/FF_bindOperator" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FF_UpdateFareStatus">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/FF_UpdateFareStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FF_FlightFaresDelete">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/FF_FlightFaresDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FF_UpdateFares">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/FF_UpdateFares" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SET_TicketIssuance">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/SET_TicketIssuance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_TicketIssuance">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/Get_TicketIssuance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SET_Call_Details1">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/SET_Call_Details1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SET_Call_Details">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/SET_Call_Details" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_FlightDetails_FT">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/Get_FlightDetails_FT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_FlightDetails_FT_OF">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/Get_FlightDetails_FT_OF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_FlightDetails_FT_TP">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/Get_FlightDetails_FT_TP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FlightFareAdmin_FT">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/FlightFareAdmin_FT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bindOperator_FT">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/bindOperator_FT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="bindFareSheet_FT">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/bindFareSheet_FT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFare_FT">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/DeleteFare_FT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFares_FT">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/UpdateFares_FT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddFares_FT">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/AddFares_FT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FF_bindOperator_FT">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/FF_bindOperator_FT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FF_UpdateFareStatus_FT">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/FF_UpdateFareStatus_FT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FF_FlightFaresDelete_FT">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/FF_FlightFaresDelete_FT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FF_UpdateFares_FT">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/FF_UpdateFares_FT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SET_Holiday_Offers">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/SET_Holiday_Offers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_Holiday_Offers">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/GET_Holiday_Offers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SET_Holiday_Special_Offers">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/SET_Holiday_Special_Offers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_Holiday_Special_Offers">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/GET_Holiday_Special_Offers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SET_Holiday_Offer_Images">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/SET_Holiday_Offer_Images" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_Holiday_Offer_Images">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/GET_Holiday_Offer_Images" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_Holiday_Offers_UI">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/GET_Holiday_Offers_UI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_Hotel_Offers_UI">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/GET_Hotel_Offers_UI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SET_Holiday_Offer_City_Overview">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/SET_Holiday_Offer_City_Overview" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_Holiday_Offer_City_Overview">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/GET_Holiday_Offer_City_Overview" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SET_Supplier_Master">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/SET_Supplier_Master" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_Supplier_Master">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/GET_Supplier_Master" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_Agents_P_L">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/GET_Agents_P_L" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetInvoiceProfit">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/SetInvoiceProfit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_Atol_Report">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/GET_Atol_Report" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchPageTracker">
+      <soap:operation soapAction="http://tempuri.org/IFandHServices/SearchPageTracker" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FandHServices">
+    <wsdl:port name="BasicHttpBinding_IFandHServices" binding="tns:BasicHttpBinding_IFandHServices">
+      <soap:address location="http://dataservice.cloudtrip.us/FandHServices.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

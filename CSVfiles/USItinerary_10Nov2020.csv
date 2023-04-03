@@ -1,0 +1,5 @@
+UniqueId,ValCarrier,JourneyType,Pax_A_BaseFare,Pax_A_Taxes,Origin,Destination,Camp_ID,ValidFrom,ValidTo,OperatingCarrierCode,SerialId,AirV,FltNum,D_AirportCode,D_AirportCityCode,D_AirportCountryCode,D_Terminal,D_Time,A_AirportCode,A_AirportCityCode,A_AirportCountryCode,A_Terminal,IsNextDayCount,A_Time,EquipType,IsReturn,BI_Pieces,BI_Description,Sector_Group,BaggageInfo,Currency
+3,AY,1,1001,2,LHR,KIN,TJ_MMD,01/01/2019 00:00,01/01/2022 00:00,AA,1,AY,4059,ZZZ,LON,GB,3,14:10,MIA,MIA,US,N,0,19:15,777,FALSE,0,No check-in baggage included in the fare,0,0 Pcs included,USD
+3,AY,1,1001,2,LHR,KIN,TJ_MMD,01/01/2019 00:00,01/01/2022 00:00,AA,2,AY,6879,MIA,MIA,US,N,22:45,KIN,KIN,JM,N,1,00:32,738,FALSE,0,No check-in baggage included in the fare,0,0 Pcs included,USD
+3,AY,1,1001,2,LHR,KIN,TJ_MMD,01/01/2019 00:00,01/01/2022 00:00,AA,3,AY,4924,KIN,KIN,JM,N,13:58,MIA,MIA,US,N,0,15:55,738,TRUE,0,No check-in baggage included in the fare,1,0 Pcs included,USD
+3,AY,1,1001,2,LHR,KIN,TJ_MMD,01/01/2019 00:00,01/01/2022 00:00,AA,4,AY,4093,MIA,MIA,US,N,18:05,LHR,LON,GB,3,1,07:45,772,TRUE,0,No check-in baggage included in the fare,1,0 Pcs included,USD

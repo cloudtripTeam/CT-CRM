@@ -1,0 +1,11 @@
+<PNRRQ>
+  <Authentication>
+    <CompanyId>3517_CT</CompanyId>
+    <CredentialId>HP_134409041248422</CredentialId>
+    <CredentialPassword>3517cto</CredentialPassword>
+    <CredentialType>LIVE</CredentialType>
+  </Authentication>
+  <Provider>1A</Provider>
+  <PNR>35PM5T</PNR>
+  <Destination>LON</Destination>
+</PNRRQ>

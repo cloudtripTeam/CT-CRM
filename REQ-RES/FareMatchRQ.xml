@@ -1,0 +1,491 @@
+﻿<FareMatchRQ>
+<FlightDetail>
+  <Itinerary>
+    <BaseFare>1202.00</BaseFare>
+    <Taxes>1574.96</Taxes>
+    <TotalPrice>2776.96</TotalPrice>
+    <markUp>18.50</markUp>
+    <Commission>0.00</Commission>
+    <GrandTotal>2795.46</GrandTotal>
+    <FareType>RP</FareType>
+    <Adult>
+      <NoAdult>2</NoAdult>
+      <AdTax>371.26</AdTax>
+      <AdtBFare>325.00</AdtBFare>
+      <markUp>5.00</markUp>
+      <Commission>0.00</Commission>
+    </Adult>
+    <Child>
+      <NoChild>2</NoChild>
+      <CHTax>371.26</CHTax>
+      <ChdBFare>244.00</ChdBFare>
+      <markUp>3.75</markUp>
+      <Commission>0.00</Commission>
+    </Child>
+    <Infant>
+      <NoInfant>2</NoInfant>
+      <InfBFare>32.00</InfBFare>
+      <InTax>44.96</InTax>
+      <markUp>0.50</markUp>
+      <Commission>0.00</Commission>
+    </Infant>
+    <IndexNumber>9</IndexNumber>
+    <Provider>1A</Provider>
+    <ValCarrier>SU</ValCarrier>
+    <LastTicketingDate>29-09-2014</LastTicketingDate>
+    <Sectors>
+      <Sector isConnect="" isStopover="">
+        <AirV>SU</AirV>
+        <AirlineName>Aeroflot</AirlineName>
+        <Class>E</Class>
+        <CabinClass>
+          <Code>Y</Code>
+          <Des>ECONOMY</Des>
+        </CabinClass>
+        <NoSeats>7</NoSeats>
+        <FltNum>2573</FltNum>
+        <Departure>
+          <AirpCode>LHR</AirpCode>
+          <Terminal>4</Terminal>
+          <Date>28-03-2015</Date>
+          <Time>15:15</Time>
+          <AirpName>Heathrow</AirpName>
+          <CityCode>LON</CityCode>
+          <CityName>London</CityName>
+          <CountryCode>GB</CountryCode>
+          <CountryName>United Kingdom</CountryName>
+          <Day>Sat</Day>
+        </Departure>
+        <Arrival>
+          <AirpCode>SVO</AirpCode>
+          <Terminal>D</Terminal>
+          <Date>28-03-2015</Date>
+          <Time>22:00</Time>
+          <AirpName>Sheremetyevo Arpt</AirpName>
+          <CityCode>MOW</CityCode>
+          <CityName>Moscow</CityName>
+          <CountryCode>RU</CountryCode>
+          <CountryName>Russia</CountryName>
+          <Day>Sat</Day>
+        </Arrival>
+        <EquipType>Airbus A321</EquipType>
+        <ElapsedTime>33:40</ElapsedTime>
+        <ActualTime>33:40</ActualTime>
+        <TechStopOver>0</TechStopOver>
+        <Status>OK</Status>
+        <isReturn>false</isReturn>
+        <OptrCarrier OptrCarrierDes="Aeroflot">SU</OptrCarrier>
+        <MrktCarrier MrktCarrierDes="Aeroflot">SU</MrktCarrier>
+        <TransitTime time="00:00" />
+      </Sector>
+      <Sector isConnect="" isStopover="">
+        <AirV>SU</AirV>
+        <AirlineName>Aeroflot</AirlineName>
+        <Class>E</Class>
+        <CabinClass>
+          <Code>Y</Code>
+          <Des>ECONOMY</Des>
+        </CabinClass>
+        <NoSeats>7</NoSeats>
+        <FltNum>270</FltNum>
+        <Departure>
+          <AirpCode>SVO</AirpCode>
+          <Terminal>F</Terminal>
+          <Date>29-03-2015</Date>
+          <Time>18:40</Time>
+          <AirpName>Sheremetyevo Arpt</AirpName>
+          <CityCode>MOW</CityCode>
+          <CityName>Moscow</CityName>
+          <CountryCode>RU</CountryCode>
+          <CountryName>Russia</CountryName>
+          <Day>Sun</Day>
+        </Departure>
+        <Arrival>
+          <AirpCode>BKK</AirpCode>
+          <Terminal />
+          <Date>30-03-2015</Date>
+          <Time>07:55</Time>
+          <AirpName>Suvarnabhumi Intl Arpt</AirpName>
+          <CityCode>BKK</CityCode>
+          <CityName>Bangkok</CityName>
+          <CountryCode>TH</CountryCode>
+          <CountryName>Thailand</CountryName>
+          <Day>Mon</Day>
+        </Arrival>
+        <EquipType>Airbus A333</EquipType>
+        <ElapsedTime>33:40</ElapsedTime>
+        <ActualTime>33:40</ActualTime>
+        <TechStopOver>0</TechStopOver>
+        <Status>OK</Status>
+        <isReturn>false</isReturn>
+        <OptrCarrier OptrCarrierDes="Aeroflot">SU</OptrCarrier>
+        <MrktCarrier MrktCarrierDes="Aeroflot">SU</MrktCarrier>
+        <TransitTime time="20:40">Connection of 20 Hours 40 Mins in Sheremetyevo Arpt, Moscow, Russia</TransitTime>
+      </Sector>
+      <Sector isConnect="" isStopover="">
+        <AirV>SU</AirV>
+        <AirlineName>Aeroflot</AirlineName>
+        <Class>Q</Class>
+        <CabinClass>
+          <Code>Y</Code>
+          <Des>ECONOMY</Des>
+        </CabinClass>
+        <NoSeats>7</NoSeats>
+        <FltNum>271</FltNum>
+        <Departure>
+          <AirpCode>BKK</AirpCode>
+          <Terminal />
+          <Date>11-04-2015</Date>
+          <Time>09:30</Time>
+          <AirpName>Suvarnabhumi Intl Arpt</AirpName>
+          <CityCode>BKK</CityCode>
+          <CityName>Bangkok</CityName>
+          <CountryCode>TH</CountryCode>
+          <CountryName>Thailand</CountryName>
+          <Day>Sat</Day>
+        </Departure>
+        <Arrival>
+          <AirpCode>SVO</AirpCode>
+          <Terminal>F</Terminal>
+          <Date>11-04-2015</Date>
+          <Time>15:20</Time>
+          <AirpName>Sheremetyevo Arpt</AirpName>
+          <CityCode>MOW</CityCode>
+          <CityName>Moscow</CityName>
+          <CountryCode>RU</CountryCode>
+          <CountryName>Russia</CountryName>
+          <Day>Sat</Day>
+        </Arrival>
+        <EquipType>Airbus A333</EquipType>
+        <ElapsedTime>16:35</ElapsedTime>
+        <ActualTime>16:35</ActualTime>
+        <TechStopOver>0</TechStopOver>
+        <Status>OK</Status>
+        <isReturn>true</isReturn>
+        <OptrCarrier OptrCarrierDes="Aeroflot">SU</OptrCarrier>
+        <MrktCarrier MrktCarrierDes="Aeroflot">SU</MrktCarrier>
+        <TransitTime time="00:00" />
+      </Sector>
+      <Sector isConnect="" isStopover="">
+        <AirV>SU</AirV>
+        <AirlineName>Aeroflot</AirlineName>
+        <Class>Q</Class>
+        <CabinClass>
+          <Code>Y</Code>
+          <Des>ECONOMY</Des>
+        </CabinClass>
+        <NoSeats>7</NoSeats>
+        <FltNum>263</FltNum>
+        <Departure>
+          <AirpCode>SVO</AirpCode>
+          <Terminal>D</Terminal>
+          <Date>11-04-2015</Date>
+          <Time>17:55</Time>
+          <AirpName>Sheremetyevo Arpt</AirpName>
+          <CityCode>MOW</CityCode>
+          <CityName>Moscow</CityName>
+          <CountryCode>RU</CountryCode>
+          <CountryName>Russia</CountryName>
+          <Day>Sat</Day>
+        </Departure>
+        <Arrival>
+          <AirpCode>LHR</AirpCode>
+          <Terminal>4</Terminal>
+          <Date>11-04-2015</Date>
+          <Time>20:05</Time>
+          <AirpName>Heathrow</AirpName>
+          <CityCode>LON</CityCode>
+          <CityName>London</CityName>
+          <CountryCode>GB</CountryCode>
+          <CountryName>United Kingdom</CountryName>
+          <Day>Sat</Day>
+        </Arrival>
+        <EquipType>Airbus A320</EquipType>
+        <ElapsedTime>16:35</ElapsedTime>
+        <ActualTime>16:35</ActualTime>
+        <TechStopOver>0</TechStopOver>
+        <Status>OK</Status>
+        <isReturn>true</isReturn>
+        <OptrCarrier OptrCarrierDes="Aeroflot">SU</OptrCarrier>
+        <MrktCarrier MrktCarrierDes="Aeroflot">SU</MrktCarrier>
+        <TransitTime time="02:35">Connection of 2 Hours 35 Mins in Sheremetyevo Arpt, Moscow, Russia</TransitTime>
+      </Sector>
+    </Sectors>
+    <FareBasisCodes>
+      <FareBasiCode>
+        <FareBasis>EPXA</FareBasis>
+        <Airline>SU</Airline>
+        <PaxType>ADT</PaxType>
+        <Origin />
+        <Destination />
+        <FareRst />
+      </FareBasiCode>
+      <FareBasiCode>
+        <FareBasis>EPXA</FareBasis>
+        <Airline>SU</Airline>
+        <PaxType>ADT</PaxType>
+        <Origin />
+        <Destination />
+        <FareRst />
+      </FareBasiCode>
+      <FareBasiCode>
+        <FareBasis>QPXA</FareBasis>
+        <Airline>SU</Airline>
+        <PaxType>ADT</PaxType>
+        <Origin />
+        <Destination />
+        <FareRst />
+      </FareBasiCode>
+      <FareBasiCode>
+        <FareBasis>QPXA</FareBasis>
+        <Airline>SU</Airline>
+        <PaxType>ADT</PaxType>
+        <Origin />
+        <Destination />
+        <FareRst />
+      </FareBasiCode>
+      <FareBasiCode>
+        <FareBasis>EPXA</FareBasis>
+        <Airline>SU</Airline>
+        <PaxType>CH</PaxType>
+        <Origin />
+        <Destination />
+        <FareRst />
+      </FareBasiCode>
+      <FareBasiCode>
+        <FareBasis>EPXA</FareBasis>
+        <Airline>SU</Airline>
+        <PaxType>CH</PaxType>
+        <Origin />
+        <Destination />
+        <FareRst />
+      </FareBasiCode>
+      <FareBasiCode>
+        <FareBasis>QPXA</FareBasis>
+        <Airline>SU</Airline>
+        <PaxType>CH</PaxType>
+        <Origin />
+        <Destination />
+        <FareRst />
+      </FareBasiCode>
+      <FareBasiCode>
+        <FareBasis>QPXA</FareBasis>
+        <Airline>SU</Airline>
+        <PaxType>CH</PaxType>
+        <Origin />
+        <Destination />
+        <FareRst />
+      </FareBasiCode>
+      <FareBasiCode>
+        <FareBasis>EPXA</FareBasis>
+        <Airline>SU</Airline>
+        <PaxType>IN</PaxType>
+        <Origin />
+        <Destination />
+        <FareRst />
+      </FareBasiCode>
+      <FareBasiCode>
+        <FareBasis>EPXA</FareBasis>
+        <Airline>SU</Airline>
+        <PaxType>IN</PaxType>
+        <Origin />
+        <Destination />
+        <FareRst />
+      </FareBasiCode>
+      <FareBasiCode>
+        <FareBasis>QPXA</FareBasis>
+        <Airline>SU</Airline>
+        <PaxType>IN</PaxType>
+        <Origin />
+        <Destination />
+        <FareRst />
+      </FareBasiCode>
+      <FareBasiCode>
+        <FareBasis>QPXA</FareBasis>
+        <Airline>SU</Airline>
+        <PaxType>IN</PaxType>
+        <Origin />
+        <Destination />
+        <FareRst />
+      </FareBasiCode>
+    </FareBasisCodes>
+  </Itinerary>
+</FlightDetail>
+<ClientDetail>
+<ClientId>ADT1</ClientId>
+<Title>MR</Title>
+<FirstName>RAKESH</FirstName>
+<LastName>KUMAR</LastName>
+<Age />
+<DOB>27-10-1987</DOB>
+<Gender>M</Gender>
+<Email>test@test.com</Email>
+<Mobile>045441213131</Mobile>
+<Phone>91984554544</Phone>
+<Meal />
+<Seat />
+<Passport />
+<Nationality />
+</ClientDetail>
+<PaxDetail>
+<NoOfAdult>2</NoOfAdult>
+<NoOfChild>2</NoOfChild>
+<NoOfInfant>2</NoOfInfant>
+<AdditionalDetails>
+<LocalId>ADT1</LocalId>
+<LocalId>ADT2</LocalId>
+<LocalId>CHD1</LocalId>
+<LocalId>CHD2</LocalId>
+<LocalId>INF1</LocalId>
+<LocalId>INF2</LocalId>
+</AdditionalDetails>
+<Adult>
+<LocalId>ADT1</LocalId>
+<Type>ADT</Type>
+<Title>MR</Title>
+<FirstName>RAKESH</FirstName>
+<LastName>KUMAR</LastName>
+<Age />
+<DOB>26-10-1985</DOB>
+<Gender>M</Gender>
+<Email />
+<Phone />
+<Meal />
+<Seat />
+<Passport />
+<Nationality />
+<InfAsso>INF1</InfAsso>
+</Adult>
+  <Adult>
+    <LocalId>ADT2</LocalId>
+    <Type>ADT</Type>
+    <Title>MR</Title>
+    <FirstName>RAESH</FirstName>
+    <LastName>KUMAR</LastName>
+    <Age />
+    <DOB>26-10-1985</DOB>
+    <Gender>M</Gender>
+    <Email />
+    <Phone />
+    <Meal />
+    <Seat />
+    <Passport />
+    <Nationality />
+    <InfAsso>INF2</InfAsso>
+  </Adult>
+<Child>
+<LocalId>CHD1</LocalId>
+<Type>CHD</Type>
+<Title>MR</Title>
+<FirstName>RAMAN</FirstName>
+<LastName>KUMAR</LastName>
+  <Age>8</Age>
+<DOB>26-10-2008</DOB>
+<Gender>M</Gender>
+<Email />
+<Phone />
+<Meal />
+<Seat />
+<Passport />
+<Nationality />
+<InfAsso />
+</Child>
+  <Child>
+    <LocalId>CHD2</LocalId>
+    <Type>CHD</Type>
+    <Title>MR</Title>
+    <FirstName>RAM</FirstName>
+    <LastName>KUMAR</LastName>
+    <Age>5</Age>
+    <DOB>26-10-2009</DOB>
+    <Gender>M</Gender>
+    <Email />
+    <Phone />
+    <Meal />
+    <Seat />
+    <Passport />
+    <Nationality />
+    <InfAsso />
+  </Child>
+<Infant>
+<LocalId>INF1</LocalId>
+<Type>INF</Type>
+<Title>MR</Title>
+<FirstName>ANGEL</FirstName>
+<LastName>KUMAR</LastName>
+ <Age>1</Age>
+<DOB>26-10-2013</DOB>
+<Gender>M</Gender>
+<Email />
+<Phone />
+<Meal />
+<Seat />
+<Passport />
+<Nationality />
+<InfAsso />
+</Infant>
+  <Infant>
+    <LocalId>INF2</LocalId>
+    <Type>INF</Type>
+    <Title>MR</Title>
+    <FirstName>babby</FirstName>
+    <LastName>KUMAR</LastName>
+    <Age>1</Age>
+      <DOB>26-10-2013</DOB>
+    <Gender>M</Gender>
+    <Email />
+    <Phone />
+    <Meal />
+    <Seat />
+    <Passport />
+    <Nationality />
+    <InfAsso />
+  </Infant>
+</PaxDetail>
+<!--<Freq_Fly>
+<Pax type="ADT" Name="">
+<Airline Code="SU" FreqFlyNo="123456"></Airline>
+<Airline Code="EK" FreqFlyNo="12345678"></Airline>
+</Pax>
+<Pax type="CHD" Name="">
+<Airline Code="SU" FreqFlyNo="12345687"></Airline>
+<Airline Code="EK" FreqFlyNo="12345697"></Airline>
+</Pax>
+</Freq_Fly>-->
+<SearchDetail>
+  <AirSearchQuery>
+    <Authentication>
+      <CompanyId>3517_CT</CompanyId>
+      <CredentialId>HP_134409041248422</CredentialId>
+      <CredentialPassword>3517cto</CredentialPassword>
+      <CredentialType>LIVE</CredentialType>
+    </Authentication>
+    <JourneyType>R</JourneyType>
+    <Segments>
+      <Segment id='1'>
+        <Origin>LON</Origin>
+        <Destination>BKK</Destination>
+        <Date>28-03-2015</Date>
+      </Segment>
+      <Segment id='2'>
+        <Origin>BKK</Origin>
+        <Destination>LON</Destination>
+        <Date>11-04-2015</Date>
+      </Segment>
+    </Segments>
+    <PaxDetail>
+      <NoAdult>2</NoAdult>
+      <NoChild>2</NoChild>
+      <NoInfant>2</NoInfant>
+    </PaxDetail>
+    <Flexi>0</Flexi>
+    <Direct>0</Direct>
+    <Cabin>
+      <Class>Y</Class>
+    </Cabin>
+    <Airlines>
+      <Airline>ALL</Airline>
+    </Airlines>
+  </AirSearchQuery>
+</SearchDetail> 
+</FareMatchRQ>

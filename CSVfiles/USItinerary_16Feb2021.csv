@@ -1,0 +1,9 @@
+UniqueId,ValCarrier,JourneyType,Pax_A_BaseFare,Pax_A_Taxes,Origin,Destination,Camp_ID,ValidFrom,ValidTo,OperatingCarrierCode,SerialId,AirV,FltNum,D_AirportCode,D_AirportCityCode,D_AirportCountryCode,D_Terminal,D_Time,A_AirportCode,A_AirportCityCode,A_AirportCountryCode,A_Terminal,IsNextDayCount,A_Time,EquipType,IsReturn,BI_Pieces,BI_Description,Sector_Group,BaggageInfo,Currency
+4,UA,1,0,400,ORD,BJX,C2BUS_JC,01/01/2019 00:00:00,01/01/2022 00:00:00,,1,UA,1754,ORD,ORD,US,N,06:00,IAH,IAH,US,N,0,08:53,772,False,0,No check-in baggage included in the fare,0,0 Pcs included,USD
+4,UA,1,0,400,ORD,BJX,C2BUS_JC,01/01/2019 00:00:00,01/01/2022 00:00:00,,2,UA,2118,IAH,IAH,US,N,09:45,BJX,BJX,MX,N,0,12:02,772,False,0,No check-in baggage included in the fare,0,0 Pcs included,USD
+4,UA,1,0,400,ORD,BJX,C2BUS_JC,01/01/2019 00:00:00,01/01/2022 00:00:00,,3,UA,6182,BJX,BJX,MX,N,15:40,IAH,IAH,US,N,0,17:47,772,True,0,No check-in baggage included in the fare,1,0 Pcs included,USD
+4,UA,1,0,400,ORD,BJX,C2BUS_JC,01/01/2019 00:00:00,01/01/2022 00:00:00,,4,UA,1009,IAH,IAH,US,N,19:40,ORD,ORD,US,N,0,22:10,772,True,0,No check-in baggage included in the fare,1,0 Pcs included,USD
+3,AA,1,500,70,RSW,BJX,C2BUS_JC,01/01/2019 00:00:00,01/01/2022 00:00:00,,1,AA,4059,RSW,RSW,US,N,03:49,DFW,DFW,US,N,0,05:55,777,False,0,No check-in baggage included in the fare,0,0 Pcs included,USD
+3,AA,1,500,70,RSW,BJX,C2BUS_JC,01/01/2019 00:00:00,01/01/2022 00:00:00,,2,AA,6879,DFW,DFW,US,N,07:00,BJX,BJX,US,N,0,09:34,738,False,0,No check-in baggage included in the fare,0,0 Pcs included,USD
+3,AA,1,500,70,RSW,BJX,C2BUS_JC,01/01/2019 00:00:00,01/01/2022 00:00:00,,3,AA,4924,BJX,BJX,US,N,02:28,DFW,DFW,US,N,0,04:55,738,True,0,No check-in baggage included in the fare,1,0 Pcs included,USD
+3,AA,1,500,70,RSW,BJX,C2BUS_JC,01/01/2019 00:00:00,01/01/2022 00:00:00,,4,AA,4093,DFW,DFW,US,N,06:45,RSW,RSW,US,N,0,10:16,772,True,0,No check-in baggage included in the fare,1,0 Pcs included,USD

@@ -1,0 +1,10 @@
+﻿<PNRCancelRQ>
+    <Authentication>
+        <CompanyId>3517_CT</CompanyId>
+        <CredentialId>HP_134409041248422</CredentialId>
+        <CredentialPassword>3517cto</CredentialPassword>
+        <CredentialType>LIVE</CredentialType>
+    </Authentication>
+    <Provider>1S</Provider>
+    <PNR>RKKOWP</PNR>
+   </PNRCancelRQ>

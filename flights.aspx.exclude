@@ -1,0 +1,197 @@
+﻿<%@ Page  Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="flights.aspx.cs" Inherits="Dial4Travel_V2.flights" %>
+<%@ Register Src="~/Controls/Offers_Subscription.ascx" TagPrefix="uc1" TagName="Offers_Subscription" %>
+<%@ Register Src="~/Controls/FlightSearchN.ascx" TagPrefix="uc1" TagName="FlightSearchN" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('html, body').animate({
+                scrollTop: $('#what').offset().top
+            }, 'slow');
+
+        });
+    </script>
+      <div class="special-area">            
+                <div class="bg-holder full text-center text-white">
+                  <img runat="server" src="~/img/continent/worldwide-flight-sale.jpg" />
+                </div>
+    </div>
+    <uc1:FlightSearchN runat="server" ID="FlightSearchN" />
+    <%--search engine goes here--%>
+    <div class="container"  id="what">
+        <div class="gap gap-small"></div>
+        
+        <%=ContentU %>
+        <div class="row row-wrap">
+        
+
+            <section>
+        <div class="container">
+
+            <h2 class="text-center mb20 m-0">Our Worldwide Collection</h2>
+            <p class="text-center mb-15">Explore our destination portfolio to find the holiday of your dreams.</p>
+            <div class="row row-wrap">
+                <div class="col-md-12">
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="thumb">
+                        <header class="thumb-header">
+                            <a class="hover-img curved" href="<%=BLL.WebsiteStaticData.WebsiteUrl %>flights/australia.aspx">
+                                <img src="img/australia.jpg" alt="Image Alternative text" title="the journey home" /><i class="fa fa-plane box-icon-white box-icon-border hover-icon-top-right round"></i>
+                                <h5 class="hover-title-center-bottom hover-hold blue-bg">Australia <i class="fa fa-arrow-right ml-5"></i></h5>
+                            </a>
+                        </header>
+
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="thumb">
+                        <header class="thumb-header">
+                            <a class="hover-img curved" href="<%=BLL.WebsiteStaticData.WebsiteUrl %>flights/new-zealand.aspx">
+                                <img src="img/new-zealand.jpg" alt="Image Alternative text" title="the journey home" /><i class="fa fa-plane box-icon-white box-icon-border hover-icon-top-right round"></i>
+                                <h5 class="hover-title-center-bottom hover-hold blue-bg">New Zealand<i class="fa fa-arrow-right ml-5"></i></h5>
+                            </a>
+                        </header>
+
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="thumb">
+                        <header class="thumb-header">
+                            <a class="hover-img curved" href="<%=BLL.WebsiteStaticData.WebsiteUrl %>flights/middle-east.aspx">
+                                <img src="img/middle-east.jpg" alt="Image Alternative text" title="the journey home" /><i class="fa fa-plane box-icon-white box-icon-border hover-icon-top-right round"></i>
+                                <h5 class="hover-title-center-bottom hover-hold blue-bg">Middle East<i class="fa fa-arrow-right ml-5"></i></h5>
+                            </a>
+                        </header>
+
+                    </div>
+                </div>
+                    </div>
+                <div class="col-md-12">
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="thumb">
+                        <header class="thumb-header">
+                            <a class="hover-img curved" href="<%=BLL.WebsiteStaticData.WebsiteUrl %>flights/usa.aspx">
+                                <img src="img/usa.jpg" alt="Image Alternative text" title="the journey home" /><i class="fa fa-plane box-icon-white box-icon-border hover-icon-top-right round"></i>
+                                <h5 class="hover-title-center-bottom hover-hold blue-bg">USA<i class="fa fa-arrow-right ml-5"></i></h5>
+                            </a>
+                        </header>
+
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="thumb">
+                        <header class="thumb-header">
+                            <a class="hover-img curved" href="<%=BLL.WebsiteStaticData.WebsiteUrl %>flights/canada.aspx">
+                                <img src="img/canada.jpg" alt="Image Alternative text" title="the journey home" /><i class="fa fa-plane box-icon-white box-icon-border hover-icon-top-right round"></i>
+                                <h5 class="hover-title-center-bottom hover-hold blue-bg">Canada<i class="fa fa-arrow-right ml-5"></i></h5>
+                            </a>
+                        </header>
+
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="thumb">
+                        <header class="thumb-header">
+                            <a class="hover-img curved" href="<%=BLL.WebsiteStaticData.WebsiteUrl %>flights/south-africa.aspx">
+                                <img src="img/africa.jpg" alt="Image Alternative text" title="the journey home" /><i class="fa fa-plane box-icon-white box-icon-border hover-icon-top-right round"></i>
+                                <h5 class="hover-title-center-bottom hover-hold blue-bg">South Africa<i class="fa fa-arrow-right ml-5"></i></h5>
+                            </a>
+                        </header>
+
+                    </div>
+                </div>
+                     </div>
+                <div class="col-md-12">
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="thumb">
+                        <header class="thumb-header">
+                            <a class="hover-img curved" href="<%=BLL.WebsiteStaticData.WebsiteUrl %>flights/east-africa.aspx">
+                                <img src="img/east-africa.jpg" alt="Image Alternative text" title="the journey home" /><i class="fa fa-plane box-icon-white box-icon-border hover-icon-top-right round"></i>
+                                <h5 class="hover-title-center-bottom hover-hold blue-bg">East Africa<i class="fa fa-arrow-right ml-5"></i></h5>
+                            </a>
+                        </header>
+
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="thumb">
+                        <header class="thumb-header">
+                            <a class="hover-img curved" href="<%=BLL.WebsiteStaticData.WebsiteUrl %>flights/far-east.aspx">
+                                <img src="img/far-east.jpg" alt="Image Alternative text" title="the journey home" /><i class="fa fa-plane box-icon-white box-icon-border hover-icon-top-right round"></i>
+                                <h5 class="hover-title-center-bottom hover-hold blue-bg">Far East<i class="fa fa-arrow-right ml-5"></i></h5>
+                            </a>
+                        </header>
+
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="thumb">
+                        <header class="thumb-header">
+                            <a class="hover-img curved" href="<%=BLL.WebsiteStaticData.WebsiteUrl %>flights/caribbean.aspx">
+                                <img src="img/caribbean.jpg" alt="Image Alternative text" title="the journey home" /><i class="fa fa-plane box-icon-white box-icon-border hover-icon-top-right round"></i>
+                                <h5 class="hover-title-center-bottom hover-hold blue-bg">Caribbean<i class="fa fa-arrow-right ml-5"></i></h5>
+                            </a>
+                        </header>
+
+                    </div>
+                </div>
+                      </div>
+                     <div class="col-md-12">
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="thumb">
+                        <header class="thumb-header">
+                            <a class="hover-img curved" href="<%=BLL.WebsiteStaticData.WebsiteUrl %>flights/south-america.aspx">
+                                <img src="img/south-america.jpg" alt="Image Alternative text" title="the journey home" /><i class="fa fa-plane box-icon-white box-icon-border hover-icon-top-right round"></i>
+                                <h5 class="hover-title-center-bottom hover-hold blue-bg">South America <i class="fa fa-arrow-right ml-5"></i></h5>
+                            </a>
+                        </header>
+
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="thumb">
+                        <header class="thumb-header">
+                            <a class="hover-img curved" href="<%=BLL.WebsiteStaticData.WebsiteUrl %>flights/indian-ocean.aspx">
+                                <img src="img/indian-ocean.jpg" alt="Image Alternative text" title="the journey home" /><i class="fa fa-plane box-icon-white box-icon-border hover-icon-top-right round"></i>
+                                <h5 class="hover-title-center-bottom hover-hold blue-bg">Indian Ocean<i class="fa fa-arrow-right ml-5"></i></h5>
+                            </a>
+                        </header>
+
+                    </div>
+                </div>
+                          
+                
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="thumb">
+                        <header class="thumb-header">
+                            <a class="hover-img curved" href="<%=BLL.WebsiteStaticData.WebsiteUrl %>flights/indian-sub-continent.aspx">
+                                <img src="img/indian-subcontinent.jpg" alt="Image Alternative text" title="the journey home" /><i class="fa fa-plane box-icon-white box-icon-border hover-icon-top-right round"></i>
+                                <h5 class="hover-title-center-bottom hover-hold blue-bg">Indian Sub Continent<i class="fa fa-arrow-right ml-5"></i></h5>
+                            </a>
+                        </header>
+
+                    </div>
+                </div>
+                          </div>
+            </div>
+            <div class="gap gap-small"></div>
+        </div>
+    </section>
+
+        </div>
+      <%=ContentB %>
+        <div class="gap"></div>
+
+
+
+        <div class="clearfix"></div>
+                <div>
+                    
+                    <div class="panel-body">
+                        <%= CountryDt %>
+                    </div>
+                </div>
+    </div>
+ <%--<uc1:Offers_Subscription runat="server" ID="Offers_Subscription" />--%>
+</asp:Content>

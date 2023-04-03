@@ -1,0 +1,262 @@
+﻿<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>EasyJet</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet" />
+    <link rel="stylesheet" href="http://easyjet.flightspro.co.uk/css/font-awesome.css" />
+    <link rel="stylesheet" href="http://easyjet.flightspro.co.uk/css/lineicons.css" />
+    <link rel="stylesheet" href="http://easyjet.flightspro.co.uk/css/weather-icons.css" />
+    <link rel="stylesheet" href="http://easyjet.flightspro.co.uk/css/bootstrap.css" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+
+
+
+    <div class="theme-hero-area">
+        <div class="theme-hero-area-bg-wrap">
+            <div class="theme-hero-area-bg" style="background-image:url(http://easyjet.flightspro.co.uk/img/1500x500-1.png);"></div>
+            <div class="theme-hero-area-mask"></div>
+        </div>
+        <div class="theme-hero-area-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 col-md-offset-1">
+                        <div class="theme-search-area _pt-50 _pb-50 _pv-mob-60 theme-search-area-stacked">
+                            <div class="theme-search-area-header _c-w _ta-c">
+                                <p class="theme-search-area-subtitle"><img src="" alt="Image Alternative text" title="Image Title" /></p>
+                                <h1 class="theme-search-area-title">Book flight tickets</h1>
+                                <p class="theme-search-area-subtitle">Best Price Available</p>
+                            </div>
+                            <div class="theme-search-area-form" id="hero-search-form">
+                                <div class="row form-group" data-gutter="none">
+                                    <div class="col-md-5 ">
+                                        <div class="row" data-gutter="none">
+                                            <div class="col-md-6 ">
+                                                <div class="form-group theme-search-area-section first theme-search-area-section-bg-white theme-search-area-section-no-border theme-search-area-section-mr theme-search-area-section-curved">
+                                                    <div class="form-group theme-search-area-section-inner">
+                                                        <i class="theme-search-area-section-icon lin lin-location-pin"></i>
+                                                        <input class="theme-search-area-section-input typeahead" id="departure" type="text" autocomplete="off" placeholder="Departure" data-provide="typeahead" />
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 ">
+                                                <div class="theme-search-area-section theme-search-area-section-bg-white theme-search-area-section-no-border theme-search-area-section-mr theme-search-area-section-curved">
+                                                    <div class="theme-search-area-section-inner">
+                                                        <i class="theme-search-area-section-icon lin lin-location-pin"></i>
+                                                        <input class="theme-search-area-section-input typeahead" autocomplete="off" type="text" id="destination" placeholder="Arrival" data-provide="typeahead" />
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 ">
+                                        <div class="row" data-gutter="none">
+                                            <div class="col-md-4 ">
+                                                <div class="theme-search-area-section theme-search-area-section-bg-white theme-search-area-section-no-border theme-search-area-section-mr theme-search-area-section-curved">
+                                                    <div class="theme-search-area-section-inner">
+                                                        <i class="theme-search-area-section-icon lin lin-calendar"></i>
+                                                        <input class="theme-search-area-section-input datePickerStart _mob-h" value="" type="text" id="departDate" placeholder="Departure Date" />
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 ">
+                                                <div class="theme-search-area-section theme-search-area-section-bg-white theme-search-area-section-no-border theme-search-area-section-mr theme-search-area-section-curved">
+                                                    <div class="theme-search-area-section-inner">
+                                                        <i class="theme-search-area-section-icon lin lin-calendar"></i>
+                                                        <input class="theme-search-area-section-input datePickerEnd _mob-h" value="" id="returnDate" type="text" placeholder="Return Date" />
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 ">
+                                                <div class="theme-search-area-section theme-search-area-section-bg-white theme-search-area-section-no-border theme-search-area-section-mr theme-search-area-section-curved quantity-selector" data-increment="Passengers">
+                                                    <div class="theme-search-area-section-inner">
+                                                        <i class="theme-search-area-section-icon lin lin-people"></i>
+                                                        <input id="totPax" class="theme-search-area-section-input" value="1 Passenger" type="text" />
+                                                        <div class="quantity-selector-box" id="FlySearchPassengers">
+                                                            <div class="quantity-selector-innerAdt">
+                                                                <p class="quantity-selector-titleAdt">Adults</p>
+                                                                <ul class="quantity-selector-controlsAdt">
+                                                                    <li class="quantity-selector-decrementAdt">
+                                                                        <a href="#">&#45;</a>
+                                                                    </li>
+                                                                    <li class="quantity-selector-currentAdt">1</li>
+                                                                    <li class="quantity-selector-incrementAdt">
+                                                                        <a href="#">&#43;</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+
+                                                            <div class="quantity-selector-innerChd">
+                                                                <p class="quantity-selector-titleChd">Childs</p>
+                                                                <ul class="quantity-selector-controlsChd">
+                                                                    <li class="quantity-selector-decrementChd">
+                                                                        <a href="#">&#45;</a>
+                                                                    </li>
+                                                                    <li class="quantity-selector-currentChd">0</li>
+                                                                    <li class="quantity-selector-incrementChd">
+                                                                        <a href="#">&#43;</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+
+                                                            <div class="quantity-selector-innerInf">
+                                                                <p class="quantity-selector-titleInf">Infants</p>
+                                                                <ul class="quantity-selector-controlsInf">
+                                                                    <li class="quantity-selector-decrementInf">
+                                                                        <a href="#">&#45;</a>
+                                                                    </li>
+                                                                    <li class="quantity-selector-currentInf">0</li>
+                                                                    <li class="quantity-selector-incrementInf">
+                                                                        <a href="#">&#43;</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+
+                                                        </div>
+
+
+
+
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1 form-group">
+                                        <button onclick="return validate();" class="theme-search-area-submit _mt-0 theme-search-area-submit-glow1 theme-search-area-submit-no-border theme-search-area-submit-curved">Go!</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="theme-search-area-options theme-search-area-options-white theme-search-area-options-center theme-search-area-options-dot-primary-inverse clearfix">
+                                <div class="btn-group theme-search-area-options-list" data-toggle="buttons">
+                                    <label class="btn btn-primary active" onclick="javascript:tripType('R');">
+                                        <input type="radio" name="flight-options" id="flight-option-1" checked />Round Trip
+                                    </label>
+                                    <label class="btn btn-primary" onclick="javascript:tripType('O');">
+                                        <input type="radio" name="flight-options" id="flight-option-2" />One Way
+                                    </label>
+
+                                    <input type="hidden" id="hidTriptype" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="theme-search-area-header _mb-20">
+                            <ul class="theme-breadcrumbs _mt-20">
+                                <li>
+                                    <p class="theme-breadcrumbs-item-title">
+                                        <a href="index.html">Home</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="theme-breadcrumbs-item-title">
+                                        <a href="#">Airlines</a>
+                                    </p>
+                                    <p class="theme-breadcrumbs-item-subtitle">450+ Airlines</p>
+                                </li>
+                                <li>
+                                    <p class="theme-breadcrumbs-item-title">
+                                        <a href="#">EasyJet Airlines</a>
+                                    </p>
+                                    <p class="theme-breadcrumbs-item-subtitle">5,478+ EasyJet Deals</p>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="http://easyjet.flightspro.co.uk/js/jquery.js"></script>
+    <script src="http://easyjet.flightspro.co.uk/js/moment.js"></script>
+    <script src="http://easyjet.flightspro.co.uk/js/bootstrap.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYeBBmgAkyAN_QKjAVOiP_kWZ_eQdadeI&callback=initMap&libraries=places"></script>
+    <script src="http://easyjet.flightspro.co.uk/js/owl-carousel.js"></script>
+    <script src="http://easyjet.flightspro.co.uk/js/blur-area.js"></script>
+    <script src="http://easyjet.flightspro.co.uk/js/icheck.js"></script>
+    <script src="http://easyjet.flightspro.co.uk/js/gmap.js"></script>
+    <script src="http://easyjet.flightspro.co.uk/js/magnific-popup.js"></script>
+    <script src="http://easyjet.flightspro.co.uk/js/ion-range-slider.js"></script>
+    <script src="http://easyjet.flightspro.co.uk/js/sticky-kit.js"></script>
+    <script src="http://easyjet.flightspro.co.uk/js/smooth-scroll.js"></script>
+    <script src="http://easyjet.flightspro.co.uk/js/fotorama.js"></script>
+    <script src="http://easyjet.flightspro.co.uk/js/bs-datepicker.js"></script>
+    <script src="http://easyjet.flightspro.co.uk/js/typeahead.js"></script>
+    <script src="quantity-selector.js"></script>
+    <script src="quantity-selector-child.js"></script>
+    <script src="quality-selector-infant.js"></script>
+    <script src="http://easyjet.flightspro.co.uk/js/countdown.js"></script>
+    <script src="http://easyjet.flightspro.co.uk/js/window-scroll-action.js"></script>
+    <script src="http://easyjet.flightspro.co.uk/js/fitvid.js"></script>
+    <script src="http://easyjet.flightspro.co.uk/js/youtube-bg.js"></script>
+    <script src="custom.js"></script>
+    <script type="text/javascript">
+
+        function validate() {
+            var depart = document.getElementById('departure').value;
+            if (depart == "") {
+                alert("Please enter valid departure city or airport"); document.getElementById('departure').focus(); return false;
+            }
+            var destination = document.getElementById('destination').value;
+            if (destination == "") {
+                alert("Please enter valid destination city or airport"); document.getElementById('destination').focus(); return false;
+            }
+            var DepD = document.getElementById('departDate').value;
+            if (DepD == "") {
+                alert("Please enter valid departure date"); document.getElementById('departDate').focus(); return false;
+            }
+            var RetD = document.getElementById('returnDate').value;
+            if (RetD == "") {
+                alert("Please enter valid return date"); document.getElementById('returnDate').focus(); return false;
+            }
+            var adt = $('.quantity-selector-currentAdt').text();
+            var chd = $('.quantity-selector-currentChd').text();
+            var inf = $('.quantity-selector-currentInf').text();
+            if ((adt + chd + inf) <= 0) {
+                alert("Please enter valid number of passengers");
+                return false;
+            }
+
+            var isReturn = $("#flight-option-1").prop("checked");
+            if (isReturn == false)
+            { RetD = ""; }
+            window.location = "https://www.flightspro.co.uk/deeplink.aspx?org=" + depart + "&dest=" + destination + "&departDate=" + DepD + "&returnDate=" + RetD + "&adt=" + adt + "&chd=" + chd + "&inf=" + inf + "&classType=Y&airline=&isReturn=" + isReturn + "&DFlights=false&isFlx=false&campaign=&company=";
+
+        }
+
+
+    </script>
+
+    <script type="text/javascript">
+        function tripType(t) {
+            if (t == "R") {
+                $("#returnDate").prop('disabled', false);
+                $("#returnDate").css("background-color", "");
+                $(hidTriptype).val("R");
+
+            }
+            if (t == "O") {
+                $("#returnDate").prop('disabled', true);
+                $("#returnDate").css("background-color", "lightgray");
+                $(hidTriptype).val("O");
+
+            }
+        }
+    </script>
+
+
+</body>
+</html>

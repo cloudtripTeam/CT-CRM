@@ -1,0 +1,86 @@
+2016-11-04T12:40:35.2309130Z - 5248 - Warn - Exception cleaning temporary files
+2016-11-04T12:40:35.2309130Z - 5248 - Warn - 
+2016-11-04T12:40:35.2309130Z - 5248 - Warn - Could not find a part of the path 'E:\Working\Dial_CMS_22-08-2016\App_Data\51Degrees'.
+2016-11-04T12:40:35.2309130Z - 5248 - Warn -    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   at System.IO.DirectoryInfo.InternalGetFiles(String searchPattern, SearchOption searchOption)
+   at System.IO.DirectoryInfo.GetFiles()
+   at FiftyOne.Foundation.Mobile.Detection.WebProvider.CleanTemporaryFiles()
+2023-03-01T12:46:59.7642742Z - 16836 - Fatal - No data source available to create provider.
+2023-03-01T12:52:34.3905844Z - 16836 - Fatal - No data source available to create provider.
+2023-03-27T21:22:20.9835051Z - 10828 - Warn - Source file 'D:\Projects\CloudTrip\CT-CRM\images\logo1.png' generated exception 'System.IO.IOException: The file 'D:\Projects\CloudTrip\CT-CRM\App_Data\Cache\1000\0\L2ltY\Wdlcy\9sb2d\vMS5w\bmc=.png' already exists.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   at System.IO.FileInfo.CopyTo(String destFileName)
+   at FiftyOne.Foundation.Mobile.Detection.Feature.ImageOptimiser.OptimisedImageResponse(HttpContext context)' shrinking to '1000' by '463'.
+2023-03-27T21:22:49.7463027Z - 10828 - Warn - Source file 'D:\Projects\CloudTrip\CT-CRM\images\logo1.png' generated exception 'System.IO.IOException: The file 'D:\Projects\CloudTrip\CT-CRM\App_Data\Cache\1000\0\L2ltY\Wdlcy\9sb2d\vMS5w\bmc=.png' already exists.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   at System.IO.FileInfo.CopyTo(String destFileName)
+   at FiftyOne.Foundation.Mobile.Detection.Feature.ImageOptimiser.OptimisedImageResponse(HttpContext context)' shrinking to '1000' by '463'.
+2023-03-27T21:23:55.3576503Z - 10828 - Warn - Source file 'D:\Projects\CloudTrip\CT-CRM\images\logo1.png' generated exception 'System.IO.IOException: The file 'D:\Projects\CloudTrip\CT-CRM\App_Data\Cache\1000\0\L2ltY\Wdlcy\9sb2d\vMS5w\bmc=.png' already exists.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   at System.IO.FileInfo.CopyTo(String destFileName)
+   at FiftyOne.Foundation.Mobile.Detection.Feature.ImageOptimiser.OptimisedImageResponse(HttpContext context)' shrinking to '1000' by '463'.
+2023-03-27T21:24:12.8451084Z - 10828 - Warn - Source file 'D:\Projects\CloudTrip\CT-CRM\images\logo1.png' generated exception 'System.IO.IOException: The file 'D:\Projects\CloudTrip\CT-CRM\App_Data\Cache\1000\0\L2ltY\Wdlcy\9sb2d\vMS5w\bmc=.png' already exists.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   at System.IO.FileInfo.CopyTo(String destFileName)
+   at FiftyOne.Foundation.Mobile.Detection.Feature.ImageOptimiser.OptimisedImageResponse(HttpContext context)' shrinking to '1000' by '463'.
+2023-03-27T21:24:14.1311341Z - 10828 - Warn - Source file 'D:\Projects\CloudTrip\CT-CRM\images\logo1.png' generated exception 'System.IO.IOException: The file 'D:\Projects\CloudTrip\CT-CRM\App_Data\Cache\1000\0\L2ltY\Wdlcy\9sb2d\vMS5w\bmc=.png' already exists.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   at System.IO.FileInfo.CopyTo(String destFileName)
+   at FiftyOne.Foundation.Mobile.Detection.Feature.ImageOptimiser.OptimisedImageResponse(HttpContext context)' shrinking to '1000' by '463'.
+2023-03-27T21:24:14.3219049Z - 10828 - Warn - Source file 'D:\Projects\CloudTrip\CT-CRM\images\logo1.png' generated exception 'System.IO.IOException: The file 'D:\Projects\CloudTrip\CT-CRM\App_Data\Cache\1000\0\L2ltY\Wdlcy\9sb2d\vMS5w\bmc=.png' already exists.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   at System.IO.FileInfo.CopyTo(String destFileName)
+   at FiftyOne.Foundation.Mobile.Detection.Feature.ImageOptimiser.OptimisedImageResponse(HttpContext context)' shrinking to '1000' by '463'.
+2023-03-27T21:24:14.5095080Z - 10828 - Warn - Source file 'D:\Projects\CloudTrip\CT-CRM\images\logo1.png' generated exception 'System.IO.IOException: The file 'D:\Projects\CloudTrip\CT-CRM\App_Data\Cache\1000\0\L2ltY\Wdlcy\9sb2d\vMS5w\bmc=.png' already exists.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   at System.IO.FileInfo.CopyTo(String destFileName)
+   at FiftyOne.Foundation.Mobile.Detection.Feature.ImageOptimiser.OptimisedImageResponse(HttpContext context)' shrinking to '1000' by '463'.
+2023-03-27T21:24:14.6982587Z - 10828 - Warn - Source file 'D:\Projects\CloudTrip\CT-CRM\images\logo1.png' generated exception 'System.IO.IOException: The file 'D:\Projects\CloudTrip\CT-CRM\App_Data\Cache\1000\0\L2ltY\Wdlcy\9sb2d\vMS5w\bmc=.png' already exists.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   at System.IO.FileInfo.CopyTo(String destFileName)
+   at FiftyOne.Foundation.Mobile.Detection.Feature.ImageOptimiser.OptimisedImageResponse(HttpContext context)' shrinking to '1000' by '463'.
+2023-03-27T21:24:14.8849268Z - 10828 - Warn - Source file 'D:\Projects\CloudTrip\CT-CRM\images\logo1.png' generated exception 'System.IO.IOException: The file 'D:\Projects\CloudTrip\CT-CRM\App_Data\Cache\1000\0\L2ltY\Wdlcy\9sb2d\vMS5w\bmc=.png' already exists.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   at System.IO.FileInfo.CopyTo(String destFileName)
+   at FiftyOne.Foundation.Mobile.Detection.Feature.ImageOptimiser.OptimisedImageResponse(HttpContext context)' shrinking to '1000' by '463'.
+2023-03-27T21:24:15.0995848Z - 10828 - Warn - Source file 'D:\Projects\CloudTrip\CT-CRM\images\logo1.png' generated exception 'System.IO.IOException: The file 'D:\Projects\CloudTrip\CT-CRM\App_Data\Cache\1000\0\L2ltY\Wdlcy\9sb2d\vMS5w\bmc=.png' already exists.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   at System.IO.FileInfo.CopyTo(String destFileName)
+   at FiftyOne.Foundation.Mobile.Detection.Feature.ImageOptimiser.OptimisedImageResponse(HttpContext context)' shrinking to '1000' by '463'.
+2023-03-27T21:24:15.2935086Z - 10828 - Warn - Source file 'D:\Projects\CloudTrip\CT-CRM\images\logo1.png' generated exception 'System.IO.IOException: The file 'D:\Projects\CloudTrip\CT-CRM\App_Data\Cache\1000\0\L2ltY\Wdlcy\9sb2d\vMS5w\bmc=.png' already exists.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   at System.IO.FileInfo.CopyTo(String destFileName)
+   at FiftyOne.Foundation.Mobile.Detection.Feature.ImageOptimiser.OptimisedImageResponse(HttpContext context)' shrinking to '1000' by '463'.
+2023-03-27T21:24:15.4789050Z - 10828 - Warn - Source file 'D:\Projects\CloudTrip\CT-CRM\images\logo1.png' generated exception 'System.IO.IOException: The file 'D:\Projects\CloudTrip\CT-CRM\App_Data\Cache\1000\0\L2ltY\Wdlcy\9sb2d\vMS5w\bmc=.png' already exists.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   at System.IO.FileInfo.CopyTo(String destFileName)
+   at FiftyOne.Foundation.Mobile.Detection.Feature.ImageOptimiser.OptimisedImageResponse(HttpContext context)' shrinking to '1000' by '463'.
+2023-03-27T21:24:15.6629492Z - 10828 - Warn - Source file 'D:\Projects\CloudTrip\CT-CRM\images\logo1.png' generated exception 'System.IO.IOException: The file 'D:\Projects\CloudTrip\CT-CRM\App_Data\Cache\1000\0\L2ltY\Wdlcy\9sb2d\vMS5w\bmc=.png' already exists.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   at System.IO.FileInfo.CopyTo(String destFileName)
+   at FiftyOne.Foundation.Mobile.Detection.Feature.ImageOptimiser.OptimisedImageResponse(HttpContext context)' shrinking to '1000' by '463'.
+2023-03-27T21:24:17.7694206Z - 10828 - Warn - Source file 'D:\Projects\CloudTrip\CT-CRM\images\logo1.png' generated exception 'System.IO.IOException: The file 'D:\Projects\CloudTrip\CT-CRM\App_Data\Cache\1000\0\L2ltY\Wdlcy\9sb2d\vMS5w\bmc=.png' already exists.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   at System.IO.FileInfo.CopyTo(String destFileName)
+   at FiftyOne.Foundation.Mobile.Detection.Feature.ImageOptimiser.OptimisedImageResponse(HttpContext context)' shrinking to '1000' by '463'.
+2023-03-27T21:24:27.9530599Z - 10828 - Warn - Source file 'D:\Projects\CloudTrip\CT-CRM\images\logo1.png' generated exception 'System.IO.IOException: The file 'D:\Projects\CloudTrip\CT-CRM\App_Data\Cache\1000\0\L2ltY\Wdlcy\9sb2d\vMS5w\bmc=.png' already exists.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   at System.IO.FileInfo.CopyTo(String destFileName)
+   at FiftyOne.Foundation.Mobile.Detection.Feature.ImageOptimiser.OptimisedImageResponse(HttpContext context)' shrinking to '1000' by '463'.

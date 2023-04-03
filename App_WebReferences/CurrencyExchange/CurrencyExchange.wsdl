@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="UpdateCurrenctExchnageRate">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateCurrenctExchnageRateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateCurrenctExchnageRateResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetExchangeRate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="baseCurrency" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="requestedCurrency" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetExchangeRateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetExchangeRateResult" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="boolean" type="s:boolean" />
+      <s:element name="decimal" type="s:decimal" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="UpdateCurrenctExchnageRateSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateCurrenctExchnageRate" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCurrenctExchnageRateSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateCurrenctExchnageRateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetExchangeRateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetExchangeRate" />
+  </wsdl:message>
+  <wsdl:message name="GetExchangeRateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetExchangeRateResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCurrenctExchnageRateHttpGetIn" />
+  <wsdl:message name="UpdateCurrenctExchnageRateHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="GetExchangeRateHttpGetIn">
+    <wsdl:part name="baseCurrency" type="s:string" />
+    <wsdl:part name="requestedCurrency" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetExchangeRateHttpGetOut">
+    <wsdl:part name="Body" element="tns:decimal" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCurrenctExchnageRateHttpPostIn" />
+  <wsdl:message name="UpdateCurrenctExchnageRateHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="GetExchangeRateHttpPostIn">
+    <wsdl:part name="baseCurrency" type="s:string" />
+    <wsdl:part name="requestedCurrency" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetExchangeRateHttpPostOut">
+    <wsdl:part name="Body" element="tns:decimal" />
+  </wsdl:message>
+  <wsdl:portType name="CurrencyExchangeSoap">
+    <wsdl:operation name="UpdateCurrenctExchnageRate">
+      <wsdl:input message="tns:UpdateCurrenctExchnageRateSoapIn" />
+      <wsdl:output message="tns:UpdateCurrenctExchnageRateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExchangeRate">
+      <wsdl:input message="tns:GetExchangeRateSoapIn" />
+      <wsdl:output message="tns:GetExchangeRateSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="CurrencyExchangeHttpGet">
+    <wsdl:operation name="UpdateCurrenctExchnageRate">
+      <wsdl:input message="tns:UpdateCurrenctExchnageRateHttpGetIn" />
+      <wsdl:output message="tns:UpdateCurrenctExchnageRateHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExchangeRate">
+      <wsdl:input message="tns:GetExchangeRateHttpGetIn" />
+      <wsdl:output message="tns:GetExchangeRateHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="CurrencyExchangeHttpPost">
+    <wsdl:operation name="UpdateCurrenctExchnageRate">
+      <wsdl:input message="tns:UpdateCurrenctExchnageRateHttpPostIn" />
+      <wsdl:output message="tns:UpdateCurrenctExchnageRateHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExchangeRate">
+      <wsdl:input message="tns:GetExchangeRateHttpPostIn" />
+      <wsdl:output message="tns:GetExchangeRateHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CurrencyExchangeSoap" type="tns:CurrencyExchangeSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UpdateCurrenctExchnageRate">
+      <soap:operation soapAction="http://tempuri.org/UpdateCurrenctExchnageRate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExchangeRate">
+      <soap:operation soapAction="http://tempuri.org/GetExchangeRate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CurrencyExchangeSoap12" type="tns:CurrencyExchangeSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UpdateCurrenctExchnageRate">
+      <soap12:operation soapAction="http://tempuri.org/UpdateCurrenctExchnageRate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExchangeRate">
+      <soap12:operation soapAction="http://tempuri.org/GetExchangeRate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CurrencyExchangeHttpGet" type="tns:CurrencyExchangeHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="UpdateCurrenctExchnageRate">
+      <http:operation location="/UpdateCurrenctExchnageRate" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExchangeRate">
+      <http:operation location="/GetExchangeRate" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CurrencyExchangeHttpPost" type="tns:CurrencyExchangeHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="UpdateCurrenctExchnageRate">
+      <http:operation location="/UpdateCurrenctExchnageRate" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetExchangeRate">
+      <http:operation location="/GetExchangeRate" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CurrencyExchange">
+    <wsdl:port name="CurrencyExchangeSoap" binding="tns:CurrencyExchangeSoap">
+      <soap:address location="http://dataservices.flightxpertuk.com/CurrencyExchange.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CurrencyExchangeSoap12" binding="tns:CurrencyExchangeSoap12">
+      <soap12:address location="http://dataservices.flightxpertuk.com/CurrencyExchange.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CurrencyExchangeHttpGet" binding="tns:CurrencyExchangeHttpGet">
+      <http:address location="http://dataservices.flightxpertuk.com/CurrencyExchange.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CurrencyExchangeHttpPost" binding="tns:CurrencyExchangeHttpPost">
+      <http:address location="http://dataservices.flightxpertuk.com/CurrencyExchange.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,19 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="NoticeBoard">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Notice">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="NoticeMessage"/>
+              <xs:element type="xs:dateTime" name="Applicable_Date"/>
+              <xs:element type="xs:dateTime" name="Expiry_Date"/>
+              <xs:element type="xs:string" name="NoticeBy"/>
+              <xs:element type="xs:dateTime" name="Created_Date"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

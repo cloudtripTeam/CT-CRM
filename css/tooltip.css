@@ -1,0 +1,426 @@
+﻿
+.tooltip
+{
+    text-decoration: none;
+    border-bottom: 1px dotted #36c;
+    color: #36c;
+    outline: none;
+   
+}
+
+/*For tooltip box*/
+div#mcTooltip
+{
+    line-height: 16px;
+    border-width: 1px;
+    color: #333;
+    border-color: #BBBBBB;
+    padding-bottom: 5px;
+    font-size: 12px;
+    font-family: Verdana, Arial;
+    border-radius: 6px; /*Rounded corners. N/A for IE 8 and below.*/
+    box-shadow: 0 1px 4px #AAAAAA; /*Drop shadow. N/A for IE 8 and below.*/
+    border: 2px solid #003467;
+    margin-top: 116px;margin-left: 75px;
+   
+}
+
+div#mcTooltip, div.mcTooltipInner
+{
+    background-color: #ECF2F9;
+    
+}
+
+/* For hyperlink within tooltip */
+div#mcTooltip a
+{
+    color: #36c;
+}
+
+/*Close button. Available when sticky or overlay has been set to true, or is on iPhone, iPad, Android, BlackBerry, or IEMobile devices. */
+div#mcttCloseButton
+{
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    background-image: url(closeBtn.gif);
+    cursor: pointer;
+    overflow: hidden;
+   
+    right: 12px;
+    
+}
+
+/* Only applies when overlay has been set to true or 1 */
+div#mcOverlay
+{
+    background-color: white;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    z-index: 4;
+}
+
+/*Only available when calling by tooltip.ajax(...). It will be a spinning image indicating a request is in progress.*/
+div#tooltipAjaxSpin
+{
+    margin: 20px 50px;
+    background: transparent url(loading.gif) no-repeat center center;
+    width: 50px;
+    height: 30px;
+    font-size: 0;
+}
+
+/*The settings below should remain unchanged*/
+div#mcTooltipWrapper
+{
+    position: absolute;    
+    visibility: hidden;
+    overflow: visible;
+    z-index: 7;
+   
+    
+}
+div#mcTooltip
+{
+    float: left;
+    border-style: solid;
+    position: relative;
+    overflow: hidden;
+    
+   
+}
+div.mcTooltipInner
+{
+    float: left;
+    position: relative;
+    width: auto;
+    height: auto;
+}
+div#mcttCo
+{
+    position: absolute;
+    text-align: left;
+    margin-top: 116px;margin-left: 75px;
+    
+}
+div#mcttCo em, div#mcttCo b
+{
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    
+}
+
+#preview
+{
+    position: absolute;
+    border: 2px solid #ccc;
+    background: #fff;
+    padding: 10px;
+    display: block;
+    color: #fff;
+}
+#preview img
+{
+    border: 1px solid #000;
+}
+.hotlname
+{
+    font-size: 11px;
+    font-weight: bold;
+    position: relative;
+    text-align: left;
+    color: #2d2d2d;
+    text-align: center;
+    margin: 4px 0 0 0;
+    padding: 0;
+    width: 92%;
+    float: left;
+}
+.tripsumm
+{
+    font-size: 20px;
+    color: #204187;
+    text-align: left;
+    border-bottom: 1px dotted #aaaaaa;
+    width: 74%;
+    float: left;
+}
+.fligthotelcontbagge
+{
+    background: #fefaff url(../pictures/baggage-allowance.png) top right no-repeat;
+    border-top: 2px solid #df6b26;
+    float: left;
+    height: auto;
+    margin: 0;
+    width: 934px;
+}
+.colmbagg
+{
+    background: #e7e7e7;
+    width: 344px;
+    height: auto;
+    float: left;
+    padding: 7px;
+}
+.margtopbot
+{
+    margin: 7px 0;
+}
+.iconpass
+{
+    background-position: -248px -39px;
+    margin-right: 7px;
+    width: 19px;
+    height: 20px;
+    float: left;
+}
+.iconchek
+{
+    background-position: -266px -39px;
+    margin-right: 7px;
+    width: 22px;
+    height: 20px;
+    float: left;
+}
+.iconweit
+{
+    background-position: -290px -39px;
+    margin-right: 7px;
+    width: 20px;
+    height: 20px;
+    float: left;
+}
+.icondesc
+{
+    float: left;
+    width: 310px;
+    height: auto;
+    text-align: left;
+    color: #2d2d2d;
+    font-size: 12px;
+}
+.icondescinp
+{
+    float: left;
+    width: 100px;
+    height: auto;
+    text-align: left;
+    color: #2d2d2d;
+    font-size: 12px;
+    border: 1px solid #ccc;
+}
+.icondescchk
+{
+    float: left;
+    width: 100px;
+    height: auto;
+    text-align: left;
+    color: #2d2d2d;
+    font-size: 12px;
+}
+.baggchrg
+{
+    width: 205px;
+    height: auto;
+    float: left;
+    color: #2D2D2D;
+    text-align: center;
+    font-size: 12px;
+    margin: 46px 0 0 104px;
+}
+.baggchrgttl
+{
+    width: 100%;
+    float: left;
+    border-bottom: 2px solid #f49237;
+    border-top: 2px solid #f49237;
+    margin-top: 4px;
+    font-size: 12px;
+    line-height: 32px;
+    color: #2D2D2D;
+    text-align: center;
+}
+
+
+.thumbord
+{
+    border: 1px solid #2d2d2d;
+}
+.botmarg
+{
+    margin-bottom: 5px;
+}
+.rigtmarg
+{
+    margin-right: 5px;
+}
+
+#main
+{
+    float: left;
+    margin: 0px 0 0 0px;
+    padding: 0px 0 0 0px;
+    width: 560px;
+    height: auto;
+    border: 2px solid #331e54;
+    border-radius: 10px 10px 10px 10px;
+}
+#first
+{
+    float: left;
+    margin: 0px 0 0 0px;
+    padding: 0px 0 0 0px;
+    width: 560px;
+    height: 30px;
+}
+#first_left
+{
+    float: left;
+    width: 200px;
+    height: auto;
+    padding: 0px 0 0 0px;
+    margin: 0px 0 0 0px;
+}
+#first_left h4
+{
+    margin: 0px 0 0 0px;
+    padding: 5px 0 0 10px;
+    color: #c085d6;
+}
+#first_right
+{
+    float: right;
+    width: 200px;
+    height: auto;
+    padding: 0px 0 0 0px;
+    margin: 0px 0 0 0px;
+}
+#first_right p
+{
+    margin: 0px 0 0 0px;
+    padding: 5px 0 0 58px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #999;
+}
+.line
+{
+    color: #309;
+}
+#head
+{
+    float: left;
+    margin: 0px 0 0 0px;
+    padding: 0px 0 0 0px;
+    width: 560px;
+    height: 25px;
+    border: 1px solid #000000;
+}
+#head p
+{
+    margin-top: 0px;
+    margin-left: 5px;
+    padding: 0px 0 0 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-stretch: expanded;
+    font-weight: bold;
+    color: #e62899;
+    text-align: justify;
+}
+#head1
+{
+    float: left;
+    margin: 0px 0 0 0px;
+    padding: 0px 0 0 0px;
+    width: 560px;
+    height: 25px;
+    border: 1px solid #000000;
+}
+#head1 p
+{
+    margin-top: 0px;
+    margin-left: 5px;
+    padding: 0px 0 0 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-stretch: expanded;
+    font-weight: bold;
+    color: #e62899;
+    text-align: justify;
+}
+#second
+{
+    float: left;
+    margin: 0px 0 0 0px;
+    padding: 0px 0 0 0px;
+    width: 560px;
+    height: auto;
+}
+#second p
+{
+    text-align: justify;
+    margin-top: 0px;
+    padding: 0px 0 0 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 15px;
+    color: #999;
+}
+#second p span
+{
+    color: #651f76;
+}
+#third
+{
+    float: left;
+    margin: 0px 0 0 0px;
+    padding: 0px 0 0 0px;
+    width: 560px;
+    height: auto;
+}
+#third p
+{
+    text-align: justify;
+    margin-top: 0px;
+    padding: 0px 0 0 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 15px;
+    color: #999;
+}
+#third p span
+{
+    color: #e62899;
+}
+#fourth
+{
+    float: left;
+    margin: 0px 0 0 0px;
+    padding: 0px 0 0 0px;
+    width: 560px;
+    height: auto;
+}
+#fourth p
+{
+    text-align: justify;
+    margin-top: 0px;
+    padding: 0px 0 0 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    line-height: 15px;
+    color: #999;
+}
+#fourth p span
+{
+    color: #651f76;
+}
+

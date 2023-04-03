@@ -1,0 +1,34 @@
+﻿<AirSearchQuery>
+<Authentication>
+<CompanyId>BKG</CompanyId>
+<CredentialId>123456</CredentialId>
+<CredentialPassword>12345</CredentialPassword>
+<CredentialType>LIVE</CredentialType>
+</Authentication>
+<JourneyType>R</JourneyType>
+<Segments>
+<Segment id='1'>
+<Origin>LON</Origin>
+<Destination>DXB</Destination>
+<Date>21-04-2015</Date>
+</Segment>
+<Segment id='2'>
+<Origin>DXB</Origin>
+<Destination>LON</Destination>
+<Date>28-04-2015</Date>
+</Segment>
+</Segments>
+<PaxDetail>
+<NoAdult>1</NoAdult>
+<NoChild>0</NoChild>
+<NoInfant>0</NoInfant>
+</PaxDetail>
+<Flexi>0</Flexi>
+<Direct>0</Direct>
+<Cabin>
+<Class>Y</Class>
+</Cabin>
+<Airlines>
+<Airline>ALL</Airline>
+</Airlines>
+</AirSearchQuery>

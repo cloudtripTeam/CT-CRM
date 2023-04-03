@@ -1,0 +1,844 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetStaticData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Company_ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetStaticDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetStaticDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="test">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="testResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="testResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateIP_Details">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateIP_DetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateIP_DetailsResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Sendcustomermail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fromAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="toAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Subject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="body" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bcc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendcustomermailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendcustomermailResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendCustomermainAttachment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fromAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="toAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Subject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="body" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bcc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="filepath" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendCustomermainAttachmentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendCustomermainAttachmentResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendCustomerMultipleAttachment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fromAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="toAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Subject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="body" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bcc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="filepathlisthashseparated" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendCustomerMultipleAttachmentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendCustomerMultipleAttachmentResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendSMS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="to" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="originator" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendSMSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendSMSResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TicketAlert">
+        <s:complexType />
+      </s:element>
+      <s:element name="TicketAlertResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="TicketAlertResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GET_SCredential">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="statements" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CompName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="vendor" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GET_SCredentialResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GET_SCredentialResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataSet" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:element ref="s:schema" />
+            <s:any />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="boolean" type="s:boolean" />
+      <s:element name="DataTable" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+            <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetStaticDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetStaticData" />
+  </wsdl:message>
+  <wsdl:message name="GetStaticDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetStaticDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="testSoapIn">
+    <wsdl:part name="parameters" element="tns:test" />
+  </wsdl:message>
+  <wsdl:message name="testSoapOut">
+    <wsdl:part name="parameters" element="tns:testResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateIP_DetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateIP_Details" />
+  </wsdl:message>
+  <wsdl:message name="UpdateIP_DetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateIP_DetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendcustomermailSoapIn">
+    <wsdl:part name="parameters" element="tns:Sendcustomermail" />
+  </wsdl:message>
+  <wsdl:message name="SendcustomermailSoapOut">
+    <wsdl:part name="parameters" element="tns:SendcustomermailResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendCustomermainAttachmentSoapIn">
+    <wsdl:part name="parameters" element="tns:SendCustomermainAttachment" />
+  </wsdl:message>
+  <wsdl:message name="SendCustomermainAttachmentSoapOut">
+    <wsdl:part name="parameters" element="tns:SendCustomermainAttachmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendCustomerMultipleAttachmentSoapIn">
+    <wsdl:part name="parameters" element="tns:SendCustomerMultipleAttachment" />
+  </wsdl:message>
+  <wsdl:message name="SendCustomerMultipleAttachmentSoapOut">
+    <wsdl:part name="parameters" element="tns:SendCustomerMultipleAttachmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendSMSSoapIn">
+    <wsdl:part name="parameters" element="tns:SendSMS" />
+  </wsdl:message>
+  <wsdl:message name="SendSMSSoapOut">
+    <wsdl:part name="parameters" element="tns:SendSMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="TicketAlertSoapIn">
+    <wsdl:part name="parameters" element="tns:TicketAlert" />
+  </wsdl:message>
+  <wsdl:message name="TicketAlertSoapOut">
+    <wsdl:part name="parameters" element="tns:TicketAlertResponse" />
+  </wsdl:message>
+  <wsdl:message name="GET_SCredentialSoapIn">
+    <wsdl:part name="parameters" element="tns:GET_SCredential" />
+  </wsdl:message>
+  <wsdl:message name="GET_SCredentialSoapOut">
+    <wsdl:part name="parameters" element="tns:GET_SCredentialResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetStaticDataHttpGetIn">
+    <wsdl:part name="Company_ID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetStaticDataHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="testHttpGetIn">
+    <wsdl:part name="name" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="testHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateIP_DetailsHttpGetIn" />
+  <wsdl:message name="UpdateIP_DetailsHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="SendcustomermailHttpGetIn">
+    <wsdl:part name="fromAddress" type="s:string" />
+    <wsdl:part name="toAddress" type="s:string" />
+    <wsdl:part name="Subject" type="s:string" />
+    <wsdl:part name="body" type="s:string" />
+    <wsdl:part name="cc" type="s:string" />
+    <wsdl:part name="bcc" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendcustomermailHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="SendCustomermainAttachmentHttpGetIn">
+    <wsdl:part name="fromAddress" type="s:string" />
+    <wsdl:part name="toAddress" type="s:string" />
+    <wsdl:part name="Subject" type="s:string" />
+    <wsdl:part name="body" type="s:string" />
+    <wsdl:part name="cc" type="s:string" />
+    <wsdl:part name="bcc" type="s:string" />
+    <wsdl:part name="filepath" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendCustomermainAttachmentHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="SendCustomerMultipleAttachmentHttpGetIn">
+    <wsdl:part name="fromAddress" type="s:string" />
+    <wsdl:part name="toAddress" type="s:string" />
+    <wsdl:part name="Subject" type="s:string" />
+    <wsdl:part name="body" type="s:string" />
+    <wsdl:part name="cc" type="s:string" />
+    <wsdl:part name="bcc" type="s:string" />
+    <wsdl:part name="filepathlisthashseparated" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendCustomerMultipleAttachmentHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="SendSMSHttpGetIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="to" type="s:string" />
+    <wsdl:part name="message" type="s:string" />
+    <wsdl:part name="originator" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendSMSHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="TicketAlertHttpGetIn" />
+  <wsdl:message name="TicketAlertHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="GET_SCredentialHttpGetIn">
+    <wsdl:part name="statements" type="s:string" />
+    <wsdl:part name="CompName" type="s:string" />
+    <wsdl:part name="vendor" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GET_SCredentialHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:message name="GetStaticDataHttpPostIn">
+    <wsdl:part name="Company_ID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetStaticDataHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="testHttpPostIn">
+    <wsdl:part name="name" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="testHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdateIP_DetailsHttpPostIn" />
+  <wsdl:message name="UpdateIP_DetailsHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="SendcustomermailHttpPostIn">
+    <wsdl:part name="fromAddress" type="s:string" />
+    <wsdl:part name="toAddress" type="s:string" />
+    <wsdl:part name="Subject" type="s:string" />
+    <wsdl:part name="body" type="s:string" />
+    <wsdl:part name="cc" type="s:string" />
+    <wsdl:part name="bcc" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendcustomermailHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="SendCustomermainAttachmentHttpPostIn">
+    <wsdl:part name="fromAddress" type="s:string" />
+    <wsdl:part name="toAddress" type="s:string" />
+    <wsdl:part name="Subject" type="s:string" />
+    <wsdl:part name="body" type="s:string" />
+    <wsdl:part name="cc" type="s:string" />
+    <wsdl:part name="bcc" type="s:string" />
+    <wsdl:part name="filepath" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendCustomermainAttachmentHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="SendCustomerMultipleAttachmentHttpPostIn">
+    <wsdl:part name="fromAddress" type="s:string" />
+    <wsdl:part name="toAddress" type="s:string" />
+    <wsdl:part name="Subject" type="s:string" />
+    <wsdl:part name="body" type="s:string" />
+    <wsdl:part name="cc" type="s:string" />
+    <wsdl:part name="bcc" type="s:string" />
+    <wsdl:part name="filepathlisthashseparated" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendCustomerMultipleAttachmentHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="SendSMSHttpPostIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="to" type="s:string" />
+    <wsdl:part name="message" type="s:string" />
+    <wsdl:part name="originator" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendSMSHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="TicketAlertHttpPostIn" />
+  <wsdl:message name="TicketAlertHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="GET_SCredentialHttpPostIn">
+    <wsdl:part name="statements" type="s:string" />
+    <wsdl:part name="CompName" type="s:string" />
+    <wsdl:part name="vendor" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GET_SCredentialHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataTable" />
+  </wsdl:message>
+  <wsdl:portType name="DataServiceSoap">
+    <wsdl:operation name="GetStaticData">
+      <wsdl:input message="tns:GetStaticDataSoapIn" />
+      <wsdl:output message="tns:GetStaticDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="test">
+      <wsdl:input message="tns:testSoapIn" />
+      <wsdl:output message="tns:testSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateIP_Details">
+      <wsdl:input message="tns:UpdateIP_DetailsSoapIn" />
+      <wsdl:output message="tns:UpdateIP_DetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Sendcustomermail">
+      <wsdl:input message="tns:SendcustomermailSoapIn" />
+      <wsdl:output message="tns:SendcustomermailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendCustomermainAttachment">
+      <wsdl:input message="tns:SendCustomermainAttachmentSoapIn" />
+      <wsdl:output message="tns:SendCustomermainAttachmentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendCustomerMultipleAttachment">
+      <wsdl:input message="tns:SendCustomerMultipleAttachmentSoapIn" />
+      <wsdl:output message="tns:SendCustomerMultipleAttachmentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSMS">
+      <wsdl:input message="tns:SendSMSSoapIn" />
+      <wsdl:output message="tns:SendSMSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TicketAlert">
+      <wsdl:input message="tns:TicketAlertSoapIn" />
+      <wsdl:output message="tns:TicketAlertSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_SCredential">
+      <wsdl:input message="tns:GET_SCredentialSoapIn" />
+      <wsdl:output message="tns:GET_SCredentialSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="DataServiceHttpGet">
+    <wsdl:operation name="GetStaticData">
+      <wsdl:input message="tns:GetStaticDataHttpGetIn" />
+      <wsdl:output message="tns:GetStaticDataHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="test">
+      <wsdl:input message="tns:testHttpGetIn" />
+      <wsdl:output message="tns:testHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateIP_Details">
+      <wsdl:input message="tns:UpdateIP_DetailsHttpGetIn" />
+      <wsdl:output message="tns:UpdateIP_DetailsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Sendcustomermail">
+      <wsdl:input message="tns:SendcustomermailHttpGetIn" />
+      <wsdl:output message="tns:SendcustomermailHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendCustomermainAttachment">
+      <wsdl:input message="tns:SendCustomermainAttachmentHttpGetIn" />
+      <wsdl:output message="tns:SendCustomermainAttachmentHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendCustomerMultipleAttachment">
+      <wsdl:input message="tns:SendCustomerMultipleAttachmentHttpGetIn" />
+      <wsdl:output message="tns:SendCustomerMultipleAttachmentHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSMS">
+      <wsdl:input message="tns:SendSMSHttpGetIn" />
+      <wsdl:output message="tns:SendSMSHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TicketAlert">
+      <wsdl:input message="tns:TicketAlertHttpGetIn" />
+      <wsdl:output message="tns:TicketAlertHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_SCredential">
+      <wsdl:input message="tns:GET_SCredentialHttpGetIn" />
+      <wsdl:output message="tns:GET_SCredentialHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="DataServiceHttpPost">
+    <wsdl:operation name="GetStaticData">
+      <wsdl:input message="tns:GetStaticDataHttpPostIn" />
+      <wsdl:output message="tns:GetStaticDataHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="test">
+      <wsdl:input message="tns:testHttpPostIn" />
+      <wsdl:output message="tns:testHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateIP_Details">
+      <wsdl:input message="tns:UpdateIP_DetailsHttpPostIn" />
+      <wsdl:output message="tns:UpdateIP_DetailsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Sendcustomermail">
+      <wsdl:input message="tns:SendcustomermailHttpPostIn" />
+      <wsdl:output message="tns:SendcustomermailHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendCustomermainAttachment">
+      <wsdl:input message="tns:SendCustomermainAttachmentHttpPostIn" />
+      <wsdl:output message="tns:SendCustomermainAttachmentHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendCustomerMultipleAttachment">
+      <wsdl:input message="tns:SendCustomerMultipleAttachmentHttpPostIn" />
+      <wsdl:output message="tns:SendCustomerMultipleAttachmentHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendSMS">
+      <wsdl:input message="tns:SendSMSHttpPostIn" />
+      <wsdl:output message="tns:SendSMSHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TicketAlert">
+      <wsdl:input message="tns:TicketAlertHttpPostIn" />
+      <wsdl:output message="tns:TicketAlertHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GET_SCredential">
+      <wsdl:input message="tns:GET_SCredentialHttpPostIn" />
+      <wsdl:output message="tns:GET_SCredentialHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DataServiceSoap" type="tns:DataServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetStaticData">
+      <soap:operation soapAction="http://tempuri.org/GetStaticData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="test">
+      <soap:operation soapAction="http://tempuri.org/test" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateIP_Details">
+      <soap:operation soapAction="http://tempuri.org/UpdateIP_Details" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sendcustomermail">
+      <soap:operation soapAction="http://tempuri.org/Sendcustomermail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendCustomermainAttachment">
+      <soap:operation soapAction="http://tempuri.org/SendCustomermainAttachment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendCustomerMultipleAttachment">
+      <soap:operation soapAction="http://tempuri.org/SendCustomerMultipleAttachment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSMS">
+      <soap:operation soapAction="http://tempuri.org/SendSMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TicketAlert">
+      <soap:operation soapAction="http://tempuri.org/TicketAlert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_SCredential">
+      <soap:operation soapAction="http://tempuri.org/GET_SCredential" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DataServiceSoap12" type="tns:DataServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetStaticData">
+      <soap12:operation soapAction="http://tempuri.org/GetStaticData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="test">
+      <soap12:operation soapAction="http://tempuri.org/test" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateIP_Details">
+      <soap12:operation soapAction="http://tempuri.org/UpdateIP_Details" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sendcustomermail">
+      <soap12:operation soapAction="http://tempuri.org/Sendcustomermail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendCustomermainAttachment">
+      <soap12:operation soapAction="http://tempuri.org/SendCustomermainAttachment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendCustomerMultipleAttachment">
+      <soap12:operation soapAction="http://tempuri.org/SendCustomerMultipleAttachment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSMS">
+      <soap12:operation soapAction="http://tempuri.org/SendSMS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TicketAlert">
+      <soap12:operation soapAction="http://tempuri.org/TicketAlert" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_SCredential">
+      <soap12:operation soapAction="http://tempuri.org/GET_SCredential" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DataServiceHttpGet" type="tns:DataServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetStaticData">
+      <http:operation location="/GetStaticData" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="test">
+      <http:operation location="/test" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateIP_Details">
+      <http:operation location="/UpdateIP_Details" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sendcustomermail">
+      <http:operation location="/Sendcustomermail" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendCustomermainAttachment">
+      <http:operation location="/SendCustomermainAttachment" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendCustomerMultipleAttachment">
+      <http:operation location="/SendCustomerMultipleAttachment" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSMS">
+      <http:operation location="/SendSMS" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TicketAlert">
+      <http:operation location="/TicketAlert" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_SCredential">
+      <http:operation location="/GET_SCredential" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DataServiceHttpPost" type="tns:DataServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetStaticData">
+      <http:operation location="/GetStaticData" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="test">
+      <http:operation location="/test" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateIP_Details">
+      <http:operation location="/UpdateIP_Details" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Sendcustomermail">
+      <http:operation location="/Sendcustomermail" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendCustomermainAttachment">
+      <http:operation location="/SendCustomermainAttachment" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendCustomerMultipleAttachment">
+      <http:operation location="/SendCustomerMultipleAttachment" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendSMS">
+      <http:operation location="/SendSMS" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TicketAlert">
+      <http:operation location="/TicketAlert" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GET_SCredential">
+      <http:operation location="/GET_SCredential" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DataService">
+    <wsdl:port name="DataServiceSoap" binding="tns:DataServiceSoap">
+      <soap:address location="http://dataservice.cloudtrip.us/DataService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="DataServiceSoap12" binding="tns:DataServiceSoap12">
+      <soap12:address location="http://dataservice.cloudtrip.us/DataService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="DataServiceHttpGet" binding="tns:DataServiceHttpGet">
+      <http:address location="http://dataservice.cloudtrip.us/DataService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="DataServiceHttpPost" binding="tns:DataServiceHttpPost">
+      <http:address location="http://dataservice.cloudtrip.us/DataService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
