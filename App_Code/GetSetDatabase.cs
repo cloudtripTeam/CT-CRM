@@ -4757,9 +4757,10 @@ public class GetSetDatabase
 
 
     public DataTable GET_FlightMarkupDetailUS(string ID, string From, string To, string AirV, string Provider, string Category,
-     string CClass, string FareType, string CompanyID, string CampID, string JourneyType, string RollName, string PageName, int PaxCount, string ModifyBy)
+     string CClass, string FareType, string CompanyID, string CampID, string JourneyType, string RollName, string PageName,
+     int PaxCount, string ModifyBy,string Amount,string AmountType,string FromDate,string ToDate,string UserId,int DTD,string RestrictedClass)
     {
-        SqlParameter[] param = new SqlParameter[16];
+        SqlParameter[] param = new SqlParameter[22];
         try
         {
             using (SqlConnection conection = DataConnection.GetConnectionMarkupUS())
@@ -4833,14 +4834,10 @@ public class GetSetDatabase
                 param[13] = new SqlParameter("@Counter", SqlDbType.VarChar, 500);
                 param[13].Value = "Select";
 
+               
                 param[14] = new SqlParameter("@paramPaxCount", SqlDbType.VarChar, 500);
                 param[14].Value = PaxCount;
-
-                if (!string.IsNullOrEmpty(PageName))
-                {
-                    param[14] = new SqlParameter("@paramPaxCount", SqlDbType.VarChar, 500);
-                    param[14].Value = PaxCount;
-                }
+               
 
                 if (!string.IsNullOrEmpty(ModifyBy))
                 {
@@ -4848,6 +4845,40 @@ public class GetSetDatabase
                     param[15].Value = ModifyBy;
                 }
 
+                if (!string.IsNullOrEmpty(Amount))
+                {
+                    param[16] = new SqlParameter("@ParamAmount", SqlDbType.VarChar, 500);
+                    param[16].Value = Amount;
+                }
+                if (!string.IsNullOrEmpty(AmountType))
+                {
+                    param[17] = new SqlParameter("@ParamAmountType", SqlDbType.VarChar, 500);
+                    param[17].Value = AmountType;
+                }
+                if (!string.IsNullOrEmpty(FromDate))
+                {
+                    param[18] = new SqlParameter("@ParamValidFromDate", SqlDbType.VarChar, 50);
+                    param[18].Value = Convert.ToDateTime(FromDate);
+                }
+                if (!string.IsNullOrEmpty(ToDate))
+                {
+                    param[19] = new SqlParameter("@ParamValidToDate", SqlDbType.DateTime);
+                    param[19].Value = Convert.ToDateTime(ToDate);
+				}
+                if (!string.IsNullOrEmpty(UserId))
+                {
+                    param[20] = new SqlParameter("@ParamUserID", SqlDbType.VarChar, 500);
+                    param[20].Value = UserId;
+                }
+               
+                param[21] = new SqlParameter("@ParamDaysToDeparture", SqlDbType.Int, 500);
+                param[21].Value = DTD;
+
+                if (!string.IsNullOrEmpty(RestrictedClass))
+                {
+                    param[20] = new SqlParameter("@paramRestrictedClass", SqlDbType.VarChar, 500);
+                    param[20].Value = RestrictedClass;
+                }
 
                 DataSet ds = SqlHelper.ExecuteDataset(conection, CommandType.StoredProcedure, "GET_SET_FlightMarkupDetail", param);
                 return ds.Tables[0];
@@ -5128,17 +5159,17 @@ public class GetSetDatabase
             string Query = "";
             if (UpdateField == "Amount")
             {
-                Query = "update Flightmarkpdetailtest set " + FieldName + "=" + Value.ToUpper() + ",Agnt_AirF_Markup_ModifiedBy='" + UpdetedBy + "',Agnt_AirF_Markup_LastModifiedDate='" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "' Where Agnt_AirF_Markup_ID=" + ID;
+                Query = "update FlightMarkupDetail set " + FieldName + "=" + Value.ToUpper() + ",Agnt_AirF_Markup_ModifiedBy='" + UpdetedBy + "',Agnt_AirF_Markup_LastModifiedDate='" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "' Where Agnt_AirF_Markup_ID=" + ID;
             }
             else
             {
                 if (UpdateField == "ValidFromDate" || UpdateField == "ValidToDate")
                 {
-                    Query = "update Flightmarkpdetailtest set " + FieldName + "='" + Convert.ToDateTime(Value).ToString("yyyy-MM-dd") + "',Agnt_AirF_Markup_ModifiedBy='" + UpdetedBy + "',Agnt_AirF_Markup_LastModifiedDate='" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "' Where Agnt_AirF_Markup_ID=" + ID;
+                    Query = "update FlightMarkupDetail set " + FieldName + "='" + Convert.ToDateTime(Value).ToString("yyyy-MM-dd") + "',Agnt_AirF_Markup_ModifiedBy='" + UpdetedBy + "',Agnt_AirF_Markup_LastModifiedDate='" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "' Where Agnt_AirF_Markup_ID=" + ID;
                 }
                 else
                 {
-                    Query = "update Flightmarkpdetailtest set " + FieldName + "='" + Value.ToUpper() + "',Agnt_AirF_Markup_ModifiedBy='" + UpdetedBy + "',Agnt_AirF_Markup_LastModifiedDate='" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "' Where Agnt_AirF_Markup_ID=" + ID;
+                    Query = "update FlightMarkupDetail set " + FieldName + "='" + Value.ToUpper() + "',Agnt_AirF_Markup_ModifiedBy='" + UpdetedBy + "',Agnt_AirF_Markup_LastModifiedDate='" + DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "' Where Agnt_AirF_Markup_ID=" + ID;
                 }
             }
             using (SqlConnection connection = DataConnection.GetConnectionMarkupUS())

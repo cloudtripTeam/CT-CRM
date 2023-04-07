@@ -22,7 +22,7 @@
          }*/
 
 
-      
+
 
     }
     void Application_Start(object sender, EventArgs e)
@@ -35,14 +35,14 @@
         //  Code that runs on application shutdown
     }
 
-    void Application_Error(object sender, EventArgs e)
-    {
-        // Code that runs when an unhandled error occurs
-        Session["error"] = "";
-        Exception exc = Server.GetLastError();
-        Session["error"] = exc;
-        Response.Redirect("/Admin/Error.aspx");
-    }
+    //void Application_Error(object sender, EventArgs e)
+    //{
+    //    // Code that runs when an unhandled error occurs
+    //    Session["error"] = "";
+    //    Exception exc = Server.GetLastError();
+    //    Session["error"] = exc;
+    //    Response.Redirect("/Admin/Error.aspx");
+    //}
 
     void Session_Start(object sender, EventArgs e)
     {

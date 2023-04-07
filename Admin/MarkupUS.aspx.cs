@@ -174,9 +174,28 @@ public partial class Admin_MarkupUS : CompressedPage
     {
         GetSetDatabase objGetSetDatabase = new GetSetDatabase();
         UserDetail objUserDetail = HttpContext.Current.Session["UserDetails"] as UserDetail;
-        DataTable dt = objGetSetDatabase.GET_FlightMarkupDetailUS("", txtMarkupFrom.Text.Trim(), txtMarkupTo.Text.Trim(), txtAirV.Text.Trim(), "",
-       "", txtMarkupClass.Text.Trim(), "", ddlCompany.SelectedValue, ddlCampDetails.SelectedValue, ddlJourneyType.SelectedValue, "", "",
-       Convert.ToInt32(ddlPax.SelectedValue),txtModifyBy.Text);
+        DataTable dt = objGetSetDatabase.GET_FlightMarkupDetailUS(string.Empty,
+																  txtMarkupFrom.Text.Trim(),
+																  txtMarkupTo.Text.Trim(),
+																  txtAirV.Text.Trim(),
+																  string.Empty,
+																  ddlCategory.SelectedValue,
+																  txtMarkupClass.Text.Trim(),
+                                                                  string.Empty,
+																  ddlCompany.SelectedValue,
+																  ddlCampDetails.SelectedValue,
+																  ddlJourneyType.SelectedValue,
+																  string.Empty,
+                                                                  string.Empty,
+																  Convert.ToInt32(ddlPax.SelectedValue),
+																  txtModifyBy.Text,
+																  txtAmount.Text,
+																  DdlAmountType.SelectedValue,
+																  txtFromDate.Text,
+																  txtToDate.Text,
+																  objUserDetail.userID,
+                                                                  txtDTD.Text == "" ? 0  : Convert.ToInt32(txtDTD.Text),
+																  txtRestrictedClass.Text);
 
         var CheckisActive = " isActive='True'";
         if (dt.Select(CheckisActive).Length > 0)

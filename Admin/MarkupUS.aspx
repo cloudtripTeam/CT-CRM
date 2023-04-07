@@ -441,7 +441,7 @@
                                 <td class='gdvh'>CampID</td>
                                 <td class='gdvh'>UBy</td>
                                 <td class='gdvh'>RClass</td>
-                                <%--<td class='gdvh'>Trip</td>--%>
+                                <td class='gdvh'>Trip</td>
                                 <%--<td class='gdvh'>Active</td>--%>
                             </tr>
                     </HeaderTemplate>
@@ -579,6 +579,7 @@
 
         function oblurUpdate(ID, UpdateField, OldValue) {
             var isUpdate = false;
+            debugger;
             try {
                 if (UpdateField == "Amount") {
                     if (isFloat($("#txt" + UpdateField + ID).val())) {
