@@ -2,12 +2,15 @@
 using NPOI.HSSF.UserModel;
 using NPOI.SS.UserModel;
 using NPOI.XSSF.UserModel;
+using OfficeOpenXml;
+using OfficeOpenXml.Style;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
 using System.Data.OleDb;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.IO;
 
 using System.Text;
@@ -255,32 +258,38 @@ public partial class Admin_MarkupUS : CompressedPage
             Response.Redirect("~/Admin/AccessDenied.aspx");
             return;
         }
-        DataTable dt = (DataTable)ViewState["Makups"];
+		DataTable dt = (DataTable)ViewState["Makups"];
         if (dt != null)
         {
-            string attachment = "attachment; filename=" + "MarkupUS_" + DateTime.Now.ToString("ddMMMyyyy") + ".xlsx";
-            Response.ClearContent();
-            Response.AddHeader("content-disposition", attachment);
-            Response.ContentType = "application/vnd.ms-excel";
-            string tab = "";
-            foreach (DataColumn dc in dt.Columns)
+            using (ExcelPackage xp = new ExcelPackage())
             {
-                Response.Write(tab + dc.ColumnName);
-                tab = "\t";
+                ExcelWorksheet ws = xp.Workbook.Worksheets.Add(dt.TableName);
+                int rowstart = 1;
+                int colstart = 1;
+                int rowend = rowstart;
+                int colend = colstart + dt.Columns.Count;
+
+				ws.Cells[rowstart, colstart, rowend, colend].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                ws.Cells[rowstart, colstart, rowend, colend].Style.VerticalAlignment = ExcelVerticalAlignment.Center;
+                ws.Cells[rowstart, colstart, rowend, colend].Style.Font.Bold = true;
+				ws.Cells[rowstart, colstart, rowend, colend].Style.Fill.PatternType = ExcelFillStyle.Solid;
+				ws.Cells[rowstart, colstart, rowend, colend].Style.Fill.BackgroundColor.SetColor(Color.LightGray);
+				rowstart += 0;
+				rowend = rowstart + dt.Rows.Count;
+				ws.Cells[rowstart, colstart].LoadFromDataTable(dt, true);
+                ws.Cells[ws.Dimension.Address].AutoFitColumns();
+
+                ws.Cells[rowstart, colstart, rowend, colend].Style.Border.Top.Style =
+                ws.Cells[rowstart, colstart, rowend, colend].Style.Border.Bottom.Style =
+                ws.Cells[rowstart, colstart, rowend, colend].Style.Border.Left.Style =
+                ws.Cells[rowstart, colstart, rowend, colend].Style.Border.Right.Style = ExcelBorderStyle.Thin;
+
+
+                Response.AddHeader("content-disposition", "attachment; filename=" + "MarkupUS_" + DateTime.Now.ToString("ddMMMyyyy") + ".xlsx");
+                Response.ContentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
+                Response.BinaryWrite(xp.GetAsByteArray());
+                Response.End();
             }
-            Response.Write("\n");
-            int i;
-            foreach (DataRow dr in dt.Rows)
-            {
-                tab = "";
-                for (i = 0; i < dt.Columns.Count; i++)
-                {
-                    Response.Write(tab + dr[i].ToString());
-                    tab = "\t";
-                }
-                Response.Write("\n");
-            }
-            Response.End();
         }
     }
 
@@ -424,7 +433,7 @@ public partial class Admin_MarkupUS : CompressedPage
             }
             string FilePath = Server.MapPath("~/Admin/Markup/" + FileName);
             FileUpload1.SaveAs(FilePath);
-            SaveRows(FilePath, Extension, "Yes");
+            SaveUploadedExcelFile_MarkupUS();
         }
         else
         {
@@ -433,62 +442,59 @@ public partial class Admin_MarkupUS : CompressedPage
         }
     }
 
-    public void SaveRows(string FilePath, string Extension, string isHDR)
+    public void SaveUploadedExcelFile_MarkupUS()
     {
+
+        DataTable excelDataTable = new DataTable();
+        DataTable dtInsert = CreateMarkupDataTable();
+        int ctr = 0;
+
+
+        Stream fs = FileUpload1.FileContent;
+        ExcelPackage package = new ExcelPackage(fs);
+        excelDataTable = package.ToDataTable();
         UserDetail objUserDetail = Session["UserDetails"] as UserDetail;
-        string sExcelconnectionstring = "";
-        switch (Extension)
-        {
-            case ".xls": //Excel 97-03
-                //sExcelconnectionstring = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + FilePath + "; Extended Properties='Excel 8.0;HDR=" + isHDR + ";IMEX=1;'";
-                sExcelconnectionstring = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + FilePath + ";" + "Extended Properties=\"Excel 12.0 Xml; IMEX=1; HDR=Yes\"";
-                break;
-            case ".xlsx": //Excel 07
-                sExcelconnectionstring = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + FilePath + "; Extended Properties='Excel 12.0 Xml;  IMEX=1; HDR=" + isHDR + "'";
-                break;
+
+
+		for (int i = 0; i < excelDataTable.Rows.Count; i++)
+		{
+            dtInsert.Rows.Add(CreateMarkupDtaRow(
+                                                    dtInsert.NewRow(),
+                                                    excelDataTable.Rows[i]["SNo"].ToString(),
+                                                    excelDataTable.Rows[i]["From"].ToString(),
+                                                    excelDataTable.Rows[i]["To"].ToString(),
+                                                    excelDataTable.Rows[i]["Airline"].ToString(), 
+                                                    excelDataTable.Rows[i]["GDS"].ToString(),
+                                                    excelDataTable.Rows[i]["CabinClass"].ToString(),
+                                                    excelDataTable.Rows[i]["Class"].ToString(),
+                                                    excelDataTable.Rows[i]["FareType"].ToString(),
+                                                    excelDataTable.Rows[i]["Amount"].ToString(),
+                                                    excelDataTable.Rows[i]["AmountType"].ToString(),
+                                                    excelDataTable.Rows[i]["ValidFromDate"].ToString(),
+                                                    excelDataTable.Rows[i]["ValidToDate"].ToString(),
+                                                    excelDataTable.Rows[i]["Company_ID"].ToString(),
+                                                    excelDataTable.Rows[i]["Camp_ID"].ToString(),
+                                                    excelDataTable.Rows[i]["JourneyType"].ToString(),
+                                                    objUserDetail.userID,
+                                                    ref ctr, 
+                                                    excelDataTable.Rows[i]["DaysToDeparture"].ToString(),
+                                                    excelDataTable.Rows[i]["PaxCount"].ToString(),
+                                                    excelDataTable.Rows[i]["RestrictedClass"].ToString())
+                                                );
         }
-
-        sExcelconnectionstring = String.Format(sExcelconnectionstring, FilePath, isHDR);
-
-        using (OleDbConnection OleDbCon = new OleDbConnection(sExcelconnectionstring))
-        {
-            OleDbCon.Open();
-            System.Data.DataTable dtExcelSchema;
-            dtExcelSchema = OleDbCon.GetOleDbSchemaTable(OleDbSchemaGuid.Tables, null);
-            string SheetName = dtExcelSchema.Rows[0]["TABLE_NAME"].ToString();
-            OleDbCon.Close();
-            System.Data.DataTable dt = CreateMarkupDataTable();
-            OleDbCommand OleDbCmd = new OleDbCommand("Select * FROM [" + SheetName + "]", OleDbCon);
-            OleDbCon.Open();
-            using (DbDataReader dr = OleDbCmd.ExecuteReader())
-            {
-                int ctr = 0;
-                OleDbCommand oleCMD2 = new OleDbCommand("select Max(SNo) from [" + SheetName + "]", OleDbCon);
-                ctr = Convert.ToInt32(oleCMD2.ExecuteScalar());
-                while (dr.Read())
-                {
-                    dt.Rows.Add(CreateMarkupDtaRow(dt.NewRow(), dr["SNo"].ToString(), dr["From"].ToString(),
-                        dr["To"].ToString(), dr["Airline"].ToString(), dr["GDS"].ToString(),
-                        dr["CabinClass"].ToString(), dr["Class"].ToString(), dr["FareType"].ToString(),
-                        dr["Amount"].ToString(), dr["AmountType"].ToString(), dr["ValidFromDate"].ToString(),
-                        dr["ValidToDate"].ToString(), dr["Company_ID"].ToString(), dr["Camp_ID"].ToString(),
-                        dr["JourneyType"].ToString(), objUserDetail.userID, ref ctr, dr["DaysToDeparture"].ToString(),
-                        dr["PaxCount"].ToString(), dr["RestrictedClass"].ToString()));
-                }
-
-                using (SqlConnection SqlCon = DataConnection.GetConnectionMarkupUS())
+        using (SqlConnection SqlCon = DataConnection.GetConnectionMarkupUS())
                 {
                     using (SqlCommand cmd = new SqlCommand())
                     {
                         cmd.Connection = SqlCon;
                         cmd.CommandText = "AirFareMarkup_BulkCopy";
                         cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@ParamAirFareMarkup", dt);
+                        cmd.Parameters.AddWithValue("@ParamAirFareMarkup", dtInsert);
                         try
                         {
                             SqlCon.Open();
                             int i = cmd.ExecuteNonQuery();
-                            lblMsg.Text = i + " Markups are successfully Uploaded out of " + dt.Rows.Count;
+                            lblMsg.Text = i + " Markups are successfully Uploaded out of " + dtInsert.Rows.Count;
                         }
                         catch (Exception ex)
                         {
@@ -501,10 +507,7 @@ public partial class Admin_MarkupUS : CompressedPage
                         }
                     }
                 }
-            }
-
         }
-    }
 
     #region Markup Make Table
     private System.Data.DataTable CreateMarkupDataTable()
